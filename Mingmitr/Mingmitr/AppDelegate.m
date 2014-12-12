@@ -17,6 +17,81 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.update = [[UpdateViewController alloc] init];
+    self.menu = [[MenuViewController alloc] init];
+    self.member = [[MemberViewController alloc] init];
+    self.contact = [[ContactViewController alloc] init];
+    
+    if (IS_WIDESCREEN) {
+        
+        self.update = [[UpdateViewController alloc] initWithNibName:@"UpdateViewController_Wide" bundle:nil];
+        self.menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController_Wide" bundle:nil];
+        self.member = [[MemberViewController alloc] initWithNibName:@"MemberViewController_Wide" bundle:nil];
+        self.contact = [[ContactViewController alloc] initWithNibName:@"ContactViewController_Wide" bundle:nil];
+        
+    } else {
+        
+        self.update = [[UpdateViewController alloc] initWithNibName:@"UpdateViewController" bundle:nil];
+        self.menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+        self.member = [[MemberViewController alloc] initWithNibName:@"MemberViewController" bundle:nil];
+        self.contact = [[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil];
+        
+    }
+    
+    self.tabBarViewController = [[TabBarViewController alloc] initWithBackgroundImage:nil viewControllers:self.update,self.menu,self.member,self.contact,nil];
+    
+    //self.update.delegate = self;
+    //self.menu.delegate = self;
+    //self.member.delegate = self;
+    //self.contact.delegate = self;
+    
+    if(IS_WIDESCREEN){
+        
+        TabBarItemButton *item0 = [self.tabBarViewController.itemButtons objectAtIndex:0];
+        [item0 setHighlightedImage:[UIImage imageNamed:@"update_light"]];
+        [item0 setStanbyImage:[UIImage imageNamed:@"update_standby"]];
+        
+        TabBarItemButton *item1 = [self.tabBarViewController.itemButtons objectAtIndex:1];
+        [item1 setHighlightedImage:[UIImage imageNamed:@"menu_light"]];
+        [item1 setStanbyImage:[UIImage imageNamed:@"menu_standby"]];
+        
+        TabBarItemButton *item2 = [self.tabBarViewController.itemButtons objectAtIndex:2];
+        [item2 setHighlightedImage:[UIImage imageNamed:@"member_light"]];
+        [item2 setStanbyImage:[UIImage imageNamed:@"member_standby"]];
+        
+        TabBarItemButton *item3 = [self.tabBarViewController.itemButtons objectAtIndex:3];
+        [item3 setHighlightedImage:[UIImage imageNamed:@"contact_light"]];
+        [item3 setStanbyImage:[UIImage imageNamed:@"contact_standby"]];
+        
+    }else{
+        
+        TabBarItemButton *item0 = [self.tabBarViewController.itemButtons objectAtIndex:0];
+        [item0 setHighlightedImage:[UIImage imageNamed:@"update_light"]];
+        [item0 setStanbyImage:[UIImage imageNamed:@"update_standby"]];
+        
+        TabBarItemButton *item1 = [self.tabBarViewController.itemButtons objectAtIndex:1];
+        [item1 setHighlightedImage:[UIImage imageNamed:@"menu_light"]];
+        [item1 setStanbyImage:[UIImage imageNamed:@"menu_standby"]];
+        
+        TabBarItemButton *item2 = [self.tabBarViewController.itemButtons objectAtIndex:2];
+        [item2 setHighlightedImage:[UIImage imageNamed:@"member_light"]];
+        [item2 setStanbyImage:[UIImage imageNamed:@"member_standby"]];
+        
+        TabBarItemButton *item3 = [self.tabBarViewController.itemButtons objectAtIndex:3];
+        [item3 setHighlightedImage:[UIImage imageNamed:@"contact_light"]];
+        [item3 setStanbyImage:[UIImage imageNamed:@"contact_standby"]];
+        
+    }
+    
+    [self.tabBarViewController setSelectedIndex:1];
+    [self.tabBarViewController setSelectedIndex:2];
+    [self.tabBarViewController setSelectedIndex:3];
+    [self.tabBarViewController setSelectedIndex:0];
+    [self.window setRootViewController:self.tabBarViewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
