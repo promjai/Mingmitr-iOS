@@ -37,11 +37,37 @@
     [[self.navController navigationBar] setTranslucent:YES];
     [self.view addSubview:self.navController.view];
     
+    [self.segmented setBackgroundColor:[UIColor clearColor]];
+    [self.segmented setTintColor:RGB(255,255,255)];
+    CALayer *segmented = [self.segmented layer];
+    [segmented setMasksToBounds:YES];
+    [segmented setCornerRadius:5.0f];
+    
+    [self.segmented addTarget:self
+                       action:@selector(segmentselect:)
+             forControlEvents:UIControlEventValueChanged];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)segmentselect:(id)sender {
+    if (self.segmented.selectedSegmentIndex == 0) {
+        
+        
+    } else if (self.segmented.selectedSegmentIndex == 1) {
+        
+        
+    } else if (self.segmented.selectedSegmentIndex == 2) {
+        
+        
+    } else if (self.segmented.selectedSegmentIndex == 3) {
+        
+        
+    }
 }
 
 @end

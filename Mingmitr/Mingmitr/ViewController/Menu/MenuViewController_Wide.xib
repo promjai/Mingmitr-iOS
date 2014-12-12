@@ -46,7 +46,7 @@
                                 <segment title="Beans"/>
                                 <segment title="Franchise"/>
                             </segments>
-                            <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </segmentedControl>
                     </navigationItem>
                 </viewController>

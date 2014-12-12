@@ -30,4 +30,9 @@
 
 - (id)initWithBackgroundImage:(UIImage*)image viewControllers:(id)firstObj, ... ;
 
+- (void)hideTabBarWithAnimation:(BOOL)isAnimated;
+- (void)showTabBarWithAnimation:(BOOL)isAnimated;
+
+- (void)hideTabBar;
+
 @end

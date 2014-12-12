@@ -7,7 +7,7 @@
 //
 
 #import "TabBarViewController.h"
-#define kTabBarHeight 48
+#define kTabBarHeight 44
 
 int oldIndex;
 
@@ -94,7 +94,7 @@ int oldIndex;
         i++;
     }
     
-    [self.tabBarView setBackgroundColor:[UIColor colorWithRed:0.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:1.0f]];
+    [self.tabBarView setBackgroundColor:[UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1.0f]];
     
     [[self.viewControllers objectAtIndex:selectedIndex] setWantsFullScreenLayout:YES];
     [self.mainView addSubview:[[self.viewControllers objectAtIndex:selectedIndex] view]];
@@ -143,7 +143,6 @@ int oldIndex;
             [self.tabBarView addSubview:button];
             [_itemButtons addObject:(TabBarItemButton*)button];
             i++;
-            
         }
         _mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         
@@ -153,6 +152,52 @@ int oldIndex;
     }
     
     return self;
+}
+
+#pragma mark - show hide tabbar
+
+- (void)hideTabBarWithAnimation:(BOOL)isAnimated{
+    if (isAnimated) {
+        [UIView beginAnimations:@"hideTab" context:nil];
+        [UIView setAnimationDuration:0.3];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        if(IS_WIDESCREEN){
+            [self.tabBarView setFrame:CGRectMake(0, 568, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+        }else{
+            [self.tabBarView setFrame:CGRectMake(0, 480, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+        }
+        [UIView commitAnimations];
+    }else{
+        if(IS_WIDESCREEN){
+            [self.tabBarView setFrame:CGRectMake(0, 548, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+        }else{
+            [self.tabBarView setFrame:CGRectMake(0, 460, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+        }
+    }
+}
+
+- (void)showTabBarWithAnimation:(BOOL)isAnimated{
+    if (isAnimated) {
+        [UIView beginAnimations:@"showTab" context:nil];
+        [UIView setAnimationDuration:0.3];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+        if(IS_WIDESCREEN){
+            [self.tabBarView setFrame:CGRectMake(0, 524, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+        }else{
+            [self.tabBarView setFrame:CGRectMake(0, 436, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+        }
+        [UIView commitAnimations];
+    }else{
+        [self.tabBarView setFrame:CGRectMake(0, 416, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+    }
+}
+
+- (void)hideTabBar {
+    if(IS_WIDESCREEN){
+        [self.tabBarView setFrame:CGRectMake(0, 568, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+    }else{
+        [self.tabBarView setFrame:CGRectMake(0, 480, self.tabBarView.frame.size.width, self.tabBarView.frame.size.height)];
+    }
 }
 
 @end

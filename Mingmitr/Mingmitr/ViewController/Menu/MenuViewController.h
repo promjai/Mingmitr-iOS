@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmented;
+
 @end
