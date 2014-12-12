@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		812D4ACB1A3AA0010029F1FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 812D4ACA1A3AA0010029F1FB /* main.m */; };
+		812D4ACE1A3AA0010029F1FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 812D4ACD1A3AA0010029F1FB /* AppDelegate.m */; };
+		812D4AD61A3AA0010029F1FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812D4AD51A3AA0010029F1FB /* Images.xcassets */; };
+		812D4AD91A3AA0010029F1FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812D4AD71A3AA0010029F1FB /* LaunchScreen.xib */; };
+		812D4AE51A3AA0010029F1FB /* MingmitrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 812D4AE41A3AA0010029F1FB /* MingmitrTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		812D4ADF1A3AA0010029F1FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 812D4ABD1A3AA0010029F1FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 812D4AC41A3AA0010029F1FB;
+			remoteInfo = Mingmitr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		812D4AC51A3AA0010029F1FB /* Mingmitr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mingmitr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		812D4AC91A3AA0010029F1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		812D4ACA1A3AA0010029F1FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		812D4ACC1A3AA0010029F1FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		812D4ACD1A3AA0010029F1FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		812D4AD51A3AA0010029F1FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		812D4AD81A3AA0010029F1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		812D4ADE1A3AA0010029F1FB /* MingmitrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MingmitrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		812D4AE31A3AA0010029F1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		812D4AE41A3AA0010029F1FB /* MingmitrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MingmitrTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		812D4AC21A3AA0010029F1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812D4ADB1A3AA0010029F1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		812D4ABC1A3AA0010029F1FB = {
+			isa = PBXGroup;
+			children = (
+				812D4AC71A3AA0010029F1FB /* Mingmitr */,
+				812D4AE11A3AA0010029F1FB /* MingmitrTests */,
+				812D4AC61A3AA0010029F1FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		812D4AC61A3AA0010029F1FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				812D4AC51A3AA0010029F1FB /* Mingmitr.app */,
+				812D4ADE1A3AA0010029F1FB /* MingmitrTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		812D4AC71A3AA0010029F1FB /* Mingmitr */ = {
+			isa = PBXGroup;
+			children = (
+				812D4ACC1A3AA0010029F1FB /* AppDelegate.h */,
+				812D4ACD1A3AA0010029F1FB /* AppDelegate.m */,
+				812D4AD51A3AA0010029F1FB /* Images.xcassets */,
+				812D4AD71A3AA0010029F1FB /* LaunchScreen.xib */,
+				812D4AC81A3AA0010029F1FB /* Supporting Files */,
+			);
+			path = Mingmitr;
+			sourceTree = "<group>";
+		};
+		812D4AC81A3AA0010029F1FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				812D4AC91A3AA0010029F1FB /* Info.plist */,
+				812D4ACA1A3AA0010029F1FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		812D4AE11A3AA0010029F1FB /* MingmitrTests */ = {
+			isa = PBXGroup;
+			children = (
+				812D4AE41A3AA0010029F1FB /* MingmitrTests.m */,
+				812D4AE21A3AA0010029F1FB /* Supporting Files */,
+			);
+			path = MingmitrTests;
+			sourceTree = "<group>";
+		};
+		812D4AE21A3AA0010029F1FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				812D4AE31A3AA0010029F1FB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		812D4AC41A3AA0010029F1FB /* Mingmitr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812D4AE81A3AA0010029F1FB /* Build configuration list for PBXNativeTarget "Mingmitr" */;
+			buildPhases = (
+				812D4AC11A3AA0010029F1FB /* Sources */,
+				812D4AC21A3AA0010029F1FB /* Frameworks */,
+				812D4AC31A3AA0010029F1FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mingmitr;
+			productName = Mingmitr;
+			productReference = 812D4AC51A3AA0010029F1FB /* Mingmitr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		812D4ADD1A3AA0010029F1FB /* MingmitrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812D4AEB1A3AA0010029F1FB /* Build configuration list for PBXNativeTarget "MingmitrTests" */;
+			buildPhases = (
+				812D4ADA1A3AA0010029F1FB /* Sources */,
+				812D4ADB1A3AA0010029F1FB /* Frameworks */,
+				812D4ADC1A3AA0010029F1FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				812D4AE01A3AA0010029F1FB /* PBXTargetDependency */,
+			);
+			name = MingmitrTests;
+			productName = MingmitrTests;
+			productReference = 812D4ADE1A3AA0010029F1FB /* MingmitrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		812D4ABD1A3AA0010029F1FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Pariwat Promjai";
+				TargetAttributes = {
+					812D4AC41A3AA0010029F1FB = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					812D4ADD1A3AA0010029F1FB = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 812D4AC41A3AA0010029F1FB;
+					};
+				};
+			};
+			buildConfigurationList = 812D4AC01A3AA0010029F1FB /* Build configuration list for PBXProject "Mingmitr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 812D4ABC1A3AA0010029F1FB;
+			productRefGroup = 812D4AC61A3AA0010029F1FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				812D4AC41A3AA0010029F1FB /* Mingmitr */,
+				812D4ADD1A3AA0010029F1FB /* MingmitrTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		812D4AC31A3AA0010029F1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812D4AD91A3AA0010029F1FB /* LaunchScreen.xib in Resources */,
+				812D4AD61A3AA0010029F1FB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812D4ADC1A3AA0010029F1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		812D4AC11A3AA0010029F1FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812D4ACE1A3AA0010029F1FB /* AppDelegate.m in Sources */,
+				812D4ACB1A3AA0010029F1FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812D4ADA1A3AA0010029F1FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				812D4AE51A3AA0010029F1FB /* MingmitrTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		812D4AE01A3AA0010029F1FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 812D4AC41A3AA0010029F1FB /* Mingmitr */;
+			targetProxy = 812D4ADF1A3AA0010029F1FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		812D4AD71A3AA0010029F1FB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				812D4AD81A3AA0010029F1FB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		812D4AE61A3AA0010029F1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		812D4AE71A3AA0010029F1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		812D4AE91A3AA0010029F1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mingmitr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		812D4AEA1A3AA0010029F1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mingmitr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		812D4AEC1A3AA0010029F1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MingmitrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mingmitr.app/Mingmitr";
+			};
+			name = Debug;
+		};
+		812D4AED1A3AA0010029F1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MingmitrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mingmitr.app/Mingmitr";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		812D4AC01A3AA0010029F1FB /* Build configuration list for PBXProject "Mingmitr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812D4AE61A3AA0010029F1FB /* Debug */,
+				812D4AE71A3AA0010029F1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		812D4AE81A3AA0010029F1FB /* Build configuration list for PBXNativeTarget "Mingmitr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812D4AE91A3AA0010029F1FB /* Debug */,
+				812D4AEA1A3AA0010029F1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		812D4AEB1A3AA0010029F1FB /* Build configuration list for PBXNativeTarget "MingmitrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812D4AEC1A3AA0010029F1FB /* Debug */,
+				812D4AED1A3AA0010029F1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 812D4ABD1A3AA0010029F1FB /* Project object */;
+}
