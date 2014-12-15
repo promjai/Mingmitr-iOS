@@ -9,6 +9,7 @@
                 <outlet property="navBar" destination="TSa-b7-86F" id="6LH-hA-H8I"/>
                 <outlet property="navController" destination="ai0-Vy-zzV" id="ek4-TG-lc8"/>
                 <outlet property="navItem" destination="JgM-A4-ecA" id="hgI-S6-Cf8"/>
+                <outlet property="tableView" destination="nEO-3L-PlX" id="dWc-nG-328"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

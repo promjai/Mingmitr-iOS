@@ -94,7 +94,7 @@ int oldIndex;
         i++;
     }
     
-    [self.tabBarView setBackgroundColor:[UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1.0f]];
+    [self.tabBarView setBackgroundColor:[UIColor blackColor]];
     
     [[self.viewControllers objectAtIndex:selectedIndex] setWantsFullScreenLayout:YES];
     [self.mainView addSubview:[[self.viewControllers objectAtIndex:selectedIndex] view]];

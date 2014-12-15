@@ -47,43 +47,21 @@
     //self.member.delegate = self;
     //self.contact.delegate = self;
     
-    if(IS_WIDESCREEN){
-        
-        TabBarItemButton *item0 = [self.tabBarViewController.itemButtons objectAtIndex:0];
-        [item0 setHighlightedImage:[UIImage imageNamed:@"update_light"]];
-        [item0 setStanbyImage:[UIImage imageNamed:@"update_standby"]];
-        
-        TabBarItemButton *item1 = [self.tabBarViewController.itemButtons objectAtIndex:1];
-        [item1 setHighlightedImage:[UIImage imageNamed:@"menu_light"]];
-        [item1 setStanbyImage:[UIImage imageNamed:@"menu_standby"]];
-        
-        TabBarItemButton *item2 = [self.tabBarViewController.itemButtons objectAtIndex:2];
-        [item2 setHighlightedImage:[UIImage imageNamed:@"member_light"]];
-        [item2 setStanbyImage:[UIImage imageNamed:@"member_standby"]];
-        
-        TabBarItemButton *item3 = [self.tabBarViewController.itemButtons objectAtIndex:3];
-        [item3 setHighlightedImage:[UIImage imageNamed:@"contact_light"]];
-        [item3 setStanbyImage:[UIImage imageNamed:@"contact_standby"]];
-        
-    }else{
-        
-        TabBarItemButton *item0 = [self.tabBarViewController.itemButtons objectAtIndex:0];
-        [item0 setHighlightedImage:[UIImage imageNamed:@"update_light"]];
-        [item0 setStanbyImage:[UIImage imageNamed:@"update_standby"]];
-        
-        TabBarItemButton *item1 = [self.tabBarViewController.itemButtons objectAtIndex:1];
-        [item1 setHighlightedImage:[UIImage imageNamed:@"menu_light"]];
-        [item1 setStanbyImage:[UIImage imageNamed:@"menu_standby"]];
-        
-        TabBarItemButton *item2 = [self.tabBarViewController.itemButtons objectAtIndex:2];
-        [item2 setHighlightedImage:[UIImage imageNamed:@"member_light"]];
-        [item2 setStanbyImage:[UIImage imageNamed:@"member_standby"]];
-        
-        TabBarItemButton *item3 = [self.tabBarViewController.itemButtons objectAtIndex:3];
-        [item3 setHighlightedImage:[UIImage imageNamed:@"contact_light"]];
-        [item3 setStanbyImage:[UIImage imageNamed:@"contact_standby"]];
-        
-    }
+    TabBarItemButton *item0 = [self.tabBarViewController.itemButtons objectAtIndex:0];
+    [item0 setHighlightedImage:[UIImage imageNamed:@"en_update_on"]];
+    [item0 setStanbyImage:[UIImage imageNamed:@"en_update_off"]];
+    
+    TabBarItemButton *item1 = [self.tabBarViewController.itemButtons objectAtIndex:1];
+    [item1 setHighlightedImage:[UIImage imageNamed:@"en_menu_on"]];
+    [item1 setStanbyImage:[UIImage imageNamed:@"en_menu_off"]];
+    
+    TabBarItemButton *item2 = [self.tabBarViewController.itemButtons objectAtIndex:2];
+    [item2 setHighlightedImage:[UIImage imageNamed:@"en_member_on"]];
+    [item2 setStanbyImage:[UIImage imageNamed:@"en_member_off"]];
+    
+    TabBarItemButton *item3 = [self.tabBarViewController.itemButtons objectAtIndex:3];
+    [item3 setHighlightedImage:[UIImage imageNamed:@"en_contact_on"]];
+    [item3 setStanbyImage:[UIImage imageNamed:@"en_contact_off"]];
     
     [self.tabBarViewController setSelectedIndex:1];
     [self.tabBarViewController setSelectedIndex:2];
