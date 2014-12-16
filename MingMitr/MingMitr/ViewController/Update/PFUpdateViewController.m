@@ -231,6 +231,7 @@ NSTimer *timmer;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFUpdateCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PFUpdateCell"];
+    
     if(cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PFUpdateCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
@@ -238,19 +239,15 @@ NSTimer *timmer;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    if ([[self.feedOffline objectForKey:@"feed_updated"] intValue] != [[self.obj objectForKey:@"last_updated"] intValue]) {
+    cell.thumbnails.layer.masksToBounds = YES;
+    cell.thumbnails.contentMode = UIViewContentModeScaleAspectFill;
     
-        cell.thumbnails.layer.masksToBounds = YES;
-        cell.thumbnails.contentMode = UIViewContentModeScaleAspectFill;
-        
-        NSString *urlimg = [[NSString alloc] initWithFormat:@"%@",[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"thumb"] objectForKey:@"url"]];
-        
-        [DLImageLoader loadImageFromURL:urlimg
-                              completed:^(NSError *error, NSData *imgData) {
-                                  cell.thumbnails.image = [UIImage imageWithData:imgData];
-                              }];
-        
-    }
+    NSString *urlimg = [[NSString alloc] initWithFormat:@"%@",[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"thumb"] objectForKey:@"url"]];
+    
+    [DLImageLoader loadImageFromURL:urlimg
+                          completed:^(NSError *error, NSData *imgData) {
+                              cell.thumbnails.image = [UIImage imageWithData:imgData];
+                          }];
     
     cell.name.text = [[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"name"];
     cell.detail.text = [[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"detail"];
