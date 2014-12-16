@@ -4,11 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemberViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PFContactViewController">
             <connections>
-                <outlet property="navBar" destination="4nk-UE-Wmj" id="gnu-65-5Cm"/>
-                <outlet property="navController" destination="E2r-4O-Jrw" id="rnp-3L-n1M"/>
-                <outlet property="navItem" destination="A4E-hr-2FA" id="xay-5D-UMT"/>
+                <outlet property="navBar" destination="TSa-b7-86F" id="6LH-hA-H8I"/>
+                <outlet property="navController" destination="ai0-Vy-zzV" id="ek4-TG-lc8"/>
+                <outlet property="navItem" destination="JgM-A4-ecA" id="hgI-S6-Cf8"/>
+                <outlet property="tableView" destination="nEO-3L-PlX" id="dWc-nG-328"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,35 +20,32 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <navigationController definesPresentationContext="YES" id="E2r-4O-Jrw">
+        <navigationController definesPresentationContext="YES" id="ai0-Vy-zzV">
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nk-UE-Wmj">
+            <navigationBar key="navigationBar" contentMode="scaleToFill" id="TSa-b7-86F">
                 <autoresizingMask key="autoresizingMask"/>
             </navigationBar>
             <viewControllers>
-                <viewController id="Zky-ez-W81">
+                <viewController id="Vtd-ng-xgr">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tcu-yv-SM7"/>
-                        <viewControllerLayoutGuide type="bottom" id="l9S-h2-zrL"/>
+                        <viewControllerLayoutGuide type="top" id="SNn-ty-Jvh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ey3-aw-bV8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GdX-KO-zbL">
+                    <view key="view" contentMode="scaleToFill" id="zGZ-6b-XOM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74H-rW-8yd">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="588"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nJb-T9-DTw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nEO-3L-PlX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Reward Card" id="A4E-hr-2FA"/>
+                    <navigationItem key="navigationItem" title="Contact" id="JgM-A4-ecA"/>
                 </viewController>
             </viewControllers>
-            <point key="canvasLocation" x="741" y="332"/>
+            <point key="canvasLocation" x="752" y="332"/>
         </navigationController>
     </objects>
 </document>

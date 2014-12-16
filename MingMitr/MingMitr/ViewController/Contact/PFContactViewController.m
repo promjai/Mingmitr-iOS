@@ -6,13 +6,13 @@
 //  Copyright (c) 2557 Pariwat Promjai. All rights reserved.
 //
 
-#import "ContactViewController.h"
+#import "PFContactViewController.h"
 
-@interface ContactViewController ()
+@interface PFContactViewController ()
 
 @end
 
-@implementation ContactViewController
+@implementation PFContactViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

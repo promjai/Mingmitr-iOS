@@ -28,24 +28,24 @@
     }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.update = [[UpdateViewController alloc] init];
-    self.menu = [[MenuViewController alloc] init];
-    self.member = [[MemberViewController alloc] init];
-    self.contact = [[ContactViewController alloc] init];
+    self.update = [[PFUpdateViewController alloc] init];
+    self.menu = [[PFMenuViewController alloc] init];
+    self.member = [[PFMemberViewController alloc] init];
+    self.contact = [[PFContactViewController alloc] init];
     
     if (IS_WIDESCREEN) {
         
-        self.update = [[UpdateViewController alloc] initWithNibName:@"UpdateViewController_Wide" bundle:nil];
-        self.menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController_Wide" bundle:nil];
-        self.member = [[MemberViewController alloc] initWithNibName:@"MemberViewController_Wide" bundle:nil];
-        self.contact = [[ContactViewController alloc] initWithNibName:@"ContactViewController_Wide" bundle:nil];
+        self.update = [[PFUpdateViewController alloc] initWithNibName:@"PFUpdateViewController_Wide" bundle:nil];
+        self.menu = [[PFMenuViewController alloc] initWithNibName:@"PFMenuViewController_Wide" bundle:nil];
+        self.member = [[PFMemberViewController alloc] initWithNibName:@"PFMemberViewController_Wide" bundle:nil];
+        self.contact = [[PFContactViewController alloc] initWithNibName:@"PFContactViewController_Wide" bundle:nil];
         
     } else {
         
-        self.update = [[UpdateViewController alloc] initWithNibName:@"UpdateViewController" bundle:nil];
-        self.menu = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
-        self.member = [[MemberViewController alloc] initWithNibName:@"MemberViewController" bundle:nil];
-        self.contact = [[ContactViewController alloc] initWithNibName:@"ContactViewController" bundle:nil];
+        self.update = [[PFUpdateViewController alloc] initWithNibName:@"PFUpdateViewController" bundle:nil];
+        self.menu = [[PFMenuViewController alloc] initWithNibName:@"PFMenuViewController" bundle:nil];
+        self.member = [[PFMemberViewController alloc] initWithNibName:@"PFMemberViewController" bundle:nil];
+        self.contact = [[PFContactViewController alloc] initWithNibName:@"PFContactViewController" bundle:nil];
         
     }
     

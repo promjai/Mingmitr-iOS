@@ -10,10 +10,10 @@
 
 #import "TabBarViewController.h"
 
-#import "UpdateViewController.h"
-#import "MenuViewController.h"
-#import "MemberViewController.h"
-#import "ContactViewController.h"
+#import "PFUpdateViewController.h"
+#import "PFMenuViewController.h"
+#import "PFMemberViewController.h"
+#import "PFContactViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -21,9 +21,9 @@
 
 @property (strong, nonatomic) TabBarViewController *tabBarViewController;
 
-@property (strong, nonatomic) UpdateViewController *update;
-@property (strong, nonatomic) MenuViewController *menu;
-@property (strong, nonatomic) MemberViewController *member;
-@property (strong, nonatomic) ContactViewController *contact;
+@property (strong, nonatomic) PFUpdateViewController *update;
+@property (strong, nonatomic) PFMenuViewController *menu;
+@property (strong, nonatomic) PFMemberViewController *member;
+@property (strong, nonatomic) PFContactViewController *contact;
 
 @end

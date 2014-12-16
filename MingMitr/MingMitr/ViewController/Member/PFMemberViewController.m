@@ -6,13 +6,13 @@
 //  Copyright (c) 2557 Pariwat Promjai. All rights reserved.
 //
 
-#import "MemberViewController.h"
+#import "PFMemberViewController.h"
 
-@interface MemberViewController ()
+@interface PFMemberViewController ()
 
 @end
 
-@implementation MemberViewController
+@implementation PFMemberViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

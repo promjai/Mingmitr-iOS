@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MemberViewController : UIViewController
+@interface PFMemberViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UINavigationController *navController;
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
