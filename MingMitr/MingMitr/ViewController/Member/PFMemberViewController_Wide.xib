@@ -9,6 +9,7 @@
                 <outlet property="navBar" destination="4nk-UE-Wmj" id="gnu-65-5Cm"/>
                 <outlet property="navController" destination="E2r-4O-Jrw" id="rnp-3L-n1M"/>
                 <outlet property="navItem" destination="A4E-hr-2FA" id="xay-5D-UMT"/>
+                <outlet property="tableView" destination="nJb-T9-DTw" id="iZQ-9g-6v6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <navigationController definesPresentationContext="YES" id="E2r-4O-Jrw">
@@ -34,9 +35,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74H-rW-8yd">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="588"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nJb-T9-DTw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -47,7 +45,7 @@
                     <navigationItem key="navigationItem" title="Reward Card" id="A4E-hr-2FA"/>
                 </viewController>
             </viewControllers>
-            <point key="canvasLocation" x="741" y="332"/>
+            <point key="canvasLocation" x="738" y="243"/>
         </navigationController>
     </objects>
 </document>

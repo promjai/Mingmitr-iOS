@@ -37,6 +37,11 @@
     [[self.navController navigationBar] setTranslucent:YES];
     [self.view addSubview:self.navController.view];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl setTintColor:[UIColor whiteColor]];
+    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
     [self.segmented setBackgroundColor:[UIColor clearColor]];
     [self.segmented setTintColor:RGB(255,255,255)];
     CALayer *segmented = [self.segmented layer];
@@ -54,6 +59,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (void)refresh:(UIRefreshControl *)refreshControl {
+    
+    [self.tableView reloadData];
+    [refreshControl endRefreshing];
+    
+}
+
 - (void)segmentselect:(id)sender {
     if (self.segmented.selectedSegmentIndex == 0) {
         
@@ -68,6 +84,15 @@
         
         
     }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 0;
 }
 
 @end
