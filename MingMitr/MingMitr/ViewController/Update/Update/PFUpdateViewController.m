@@ -53,6 +53,11 @@ NSTimer *timmer;
     [[self.navController navigationBar] setTranslucent:YES];
     [self.view addSubview:self.navController.view];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl setTintColor:[UIColor whiteColor]];
+    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
     UIView *hv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
     UIView *fv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     self.tableView.tableHeaderView = hv;
@@ -65,11 +70,6 @@ NSTimer *timmer;
     [self.feedOffline setObject:@"0" forKey:@"feed_updated"];
     
     self.arrObj = [[NSMutableArray alloc] init];
-    
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl setTintColor:[UIColor whiteColor]];
-    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
     
 }
 

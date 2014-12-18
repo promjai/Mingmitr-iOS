@@ -16,7 +16,6 @@
 
 @protocol PFUpdateViewControllerDelegate <NSObject>
 
-- (void)PFImageViewController:(id)sender viewPicture:(UIImage *)image;
 - (void)HideTabbar;
 - (void)ShowTabbar;
 

@@ -15,7 +15,12 @@
 #import "PFMemberViewController.h"
 #import "PFContactViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import "SDImageCache.h"
+#import "MWPhoto.h"
+#import "MWPhotoBrowser.h"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,MWPhotoBrowserDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -25,5 +30,8 @@
 @property (strong, nonatomic) PFMenuViewController *menu;
 @property (strong, nonatomic) PFMemberViewController *member;
 @property (strong, nonatomic) PFContactViewController *contact;
+
+@property (nonatomic, strong) NSMutableArray *photos;
+@property (nonatomic, strong) NSMutableArray *thumbs;
 
 @end
