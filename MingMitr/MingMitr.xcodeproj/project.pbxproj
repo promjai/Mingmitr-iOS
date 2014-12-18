@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8161D9171A429E690062DB4B /* icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D9161A429E690062DB4B /* icon_share@2x.png */; };
+		8161D91A1A42B9A30062DB4B /* icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D9191A42B9A30062DB4B /* icon_share@3x.png */; };
 		8162762E1A41461A008F2043 /* en_member_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8162762D1A41461A008F2043 /* en_member_off@3x.png */; };
 		816276311A41464F008F2043 /* en_menu_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8162762F1A41464F008F2043 /* en_menu_off@2x.png */; };
 		816276321A41464F008F2043 /* en_menu_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816276301A41464F008F2043 /* en_menu_on@2x.png */; };
@@ -157,6 +158,7 @@
 
 /* Begin PBXFileReference section */
 		8161D9161A429E690062DB4B /* icon_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@2x.png"; sourceTree = "<group>"; };
+		8161D9191A42B9A30062DB4B /* icon_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@3x.png"; sourceTree = "<group>"; };
 		8162762D1A41461A008F2043 /* en_member_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "en_member_off@3x.png"; sourceTree = "<group>"; };
 		8162762F1A41464F008F2043 /* en_menu_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "en_menu_off@2x.png"; sourceTree = "<group>"; };
 		816276301A41464F008F2043 /* en_menu_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "en_menu_on@2x.png"; sourceTree = "<group>"; };
@@ -907,6 +909,7 @@
 				81CB73011A40232E006422C6 /* ic_loading@2x.png */,
 				81CB73021A40232E006422C6 /* ic_loading@3x.png */,
 				8161D9161A429E690062DB4B /* icon_share@2x.png */,
+				8161D9191A42B9A30062DB4B /* icon_share@3x.png */,
 				81CB73031A40232E006422C6 /* Notification_icon@2x.png */,
 				81CB73041A40232E006422C6 /* Setting_icon@2x.png */,
 			);
@@ -1106,6 +1109,7 @@
 				81DE35001A427C1100159412 /* PFProductCell.xib in Resources */,
 				81CB73161A40232E006422C6 /* en_contact_on@3x.png in Resources */,
 				81CB72E41A401BBD006422C6 /* PFUpdateCell.xib in Resources */,
+				8161D91A1A42B9A30062DB4B /* icon_share@3x.png in Resources */,
 				81CB73181A40232E006422C6 /* en_member_on@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
