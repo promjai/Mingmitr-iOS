@@ -416,6 +416,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8161D9181A42ABA10062DB4B /* FranchiseDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FranchiseDetail;
+			sourceTree = "<group>";
+		};
 		816276371A4147B4008F2043 /* Update */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +874,7 @@
 				8162764F1A41870E008F2043 /* Menu */,
 				81DE35031A42875C00159412 /* Foldertype */,
 				81DE351A1A4290F700159412 /* MenuDetail */,
+				8161D9181A42ABA10062DB4B /* FranchiseDetail */,
 			);
 			path = Menu;
 			sourceTree = "<group>";

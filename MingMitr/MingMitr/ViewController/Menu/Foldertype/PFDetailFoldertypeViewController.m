@@ -261,8 +261,6 @@ BOOL refreshDataFolder;
         
         if ([children_length isEqualToString:@"0"]) {
             
-            [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(reload:) userInfo:nil repeats:NO];
-            
             [[[UIAlertView alloc] initWithTitle:@"Mingmitr!"
                                         message:@"Coming soon."
                                        delegate:nil
@@ -285,11 +283,6 @@ BOOL refreshDataFolder;
         
     }
     
-}
-
--(void)reload:(NSTimer *)timer
-{
-    [self.tableView reloadData];
 }
 
 #pragma mark -
