@@ -20,6 +20,185 @@
     return self;
 }
 
+#pragma mark - Access Token
+- (void)saveAccessToken:(NSString *)access_token {
+    [self.userDefaults setObject:access_token forKey:@"access_token"];
+}
+
+- (NSString *)getAccessToken {
+    return [self.userDefaults objectForKey:@"access_token"];
+}
+
+#pragma mark - User ID
+- (void)saveUserId:(NSString *)user_id {
+    [self.userDefaults setObject:user_id forKey:@"user_id"];
+}
+
+- (NSString *)getUserId {
+    return [self.userDefaults objectForKey:@"user_id"];
+}
+
+#pragma mark - Check Log in
+- (BOOL)checkLogin {
+    if ([self.userDefaults objectForKey:@"user_id"] != nil || [self.userDefaults objectForKey:@"access_token"] != nil) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+#pragma mark - Register
+- (void)registerWithUsername:(NSString *)username email:(NSString *)email password:(NSString *)password gender:(NSString *)gender birth_date:(NSString *)birth_date {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@register",API_URL];
+    NSDictionary *parameters = @{@"username":username , @"password":password , @"email":email ,@"birth_date":birth_date , @"gender":gender};
+    [self.manager POST:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self registerWithUsernameResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self registerWithUsernameErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+#pragma mark - Login facebook token
+- (void)loginWithFacebookToken:(NSString *)fb_token {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@oauth/facebook",API_URL];
+    
+    NSDictionary *parameters;
+    
+    if ([[self.userDefaults objectForKey:@"deviceToken"] isEqualToString:@""] || [[self.userDefaults objectForKey:@"deviceToken"] isEqualToString:@"(null)"]) {
+        
+        parameters = @{@"facebook_token":fb_token , @"ios_device_token[key]":@"" , @"ios_device_token[type]":@"product"};
+        
+    } else {
+        
+        parameters = @{@"facebook_token":fb_token , @"ios_device_token[key]":[self.userDefaults objectForKey:@"deviceToken"] , @"ios_device_token[type]":@"product"};
+        
+    }
+    
+    [self.manager POST:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self loginWithFacebookTokenResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self loginWithFacebookTokenErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+#pragma mark - Login by Username
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@oauth/password",API_URL];
+    
+    NSDictionary *parameters = @{@"username":username , @"password":password , @"ios_device_token[key]":[self.userDefaults objectForKey:@"deviceToken"] , @"ios_device_token[type]":@"product"};
+    
+    [self.manager POST:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self loginWithUsernameResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self loginWithUsernameErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+#pragma mark - Log out
+- (void)logOut {
+    [self.userDefaults removeObjectForKey:@"deviceToken"];
+    [self.userDefaults removeObjectForKey:@"access_token"];
+    [self.userDefaults removeObjectForKey:@"user_id"];
+}
+
+#pragma mark - Me
+- (void)me {
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/%@",API_URL,[self getUserId]];
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self meResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self meErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)getUserSetting {
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/setting/%@",API_URL,[self getUserId]];
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getUserSettingResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getUserSettingErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)userPictureUpload:(NSString *)picture_base64 {
+    NSDictionary *parameters = @{@"picture":picture_base64};
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/%@",API_URL,[self getUserId]];
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager PUT:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self meResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self meErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)updateSetting:(NSString *)profilename email:(NSString *)email website:(NSString *)website tel:(NSString *)tel gender:(NSString *)gender birthday:(NSString *)birthday {
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/%@",API_URL,[self getUserId]];
+    NSDictionary *parameters = @{@"display_name":profilename , @"email":email , @"website":website , @"mobile":tel , @"gender":gender , @"birth_date":birthday};
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager PUT:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getUserSettingResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getUserSettingErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)changePassword:(NSString *)old_password new_password:(NSString *)new_password {
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/change_password/%@",API_URL,[self getUserId]];
+    NSDictionary *parameters = @{@"old_password":old_password , @"new_password":new_password  };
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager PUT:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self changPasswordResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self changPasswordErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)settingNews:(NSString *)status {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/setting/%@",API_URL,[self getUserId]];
+    
+    NSDictionary *parameters = @{@"notify_update":status};
+    
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager PUT:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getUserSettingResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getUserSettingErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)settingMessage:(NSString *)status {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/setting/%@",API_URL,[self getUserId]];
+    
+    NSDictionary *parameters = @{@"notify_message":status};
+    
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager PUT:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getUserSettingResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getUserSettingErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
 #pragma mark - Feed
 - (void)getFeed:(NSString *)limit link:(NSString *)link {
     

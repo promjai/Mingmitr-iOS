@@ -11,6 +11,28 @@
 
 @protocol PFApiDelegate <NSObject>
 
+#pragma mark - Register
+- (void)PFApi:(id)sender registerWithUsernameResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender registerWithUsernameErrorResponse:(NSString *)errorResponse;
+
+#pragma mark - Login facebook token
+- (void)PFApi:(id)sender loginWithFacebookTokenResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender loginWithFacebookTokenErrorResponse:(NSString *)errorResponse;
+
+#pragma mark - login with username password
+- (void)PFApi:(id)sender loginWithUsernameResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender loginWithUsernameErrorResponse:(NSString *)errorResponse;
+
+#pragma mark - User
+- (void)PFApi:(id)sender meResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender meErrorResponse:(NSString *)errorResponse;
+
+- (void)PFApi:(id)sender getUserSettingResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse;
+
+- (void)PFApi:(id)sender changPasswordResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender changPasswordErrorResponse:(NSString *)errorResponse;
+
 #pragma mark - Overview Protocal Delegate
 - (void)PFApi:(id)sender getFeedResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getFeedErrorResponse:(NSString *)errorResponse;
@@ -43,6 +65,38 @@
 @property AFHTTPRequestOperationManager *manager;
 @property NSUserDefaults *userDefaults;
 @property NSString *urlStr;
+
+#pragma mark - User_id
+- (void)saveUserId:(NSString *)user_id;
+- (void)saveAccessToken:(NSString *)access_token;
+
+- (NSString *)getUserId;
+- (NSString *)getAccessToken;
+
+#pragma mark - Check Login
+- (BOOL)checkLogin;
+
+#pragma mark - Register
+- (void)registerWithUsername:(NSString *)username email:(NSString *)email password:(NSString *)password gender:(NSString *)gender birth_date:(NSString *)birth_date;
+
+#pragma mark - Login facebook token
+- (void)loginWithFacebookToken:(NSString *)fb_token;
+
+#pragma mark - Login by Username
+- (void)loginWithUsername:(NSString *)username password:(NSString *)passeord;
+
+#pragma mark - Log out
+- (void)logOut;
+
+#pragma mark - User
+- (void)me;
+- (void)getUserSetting;
+- (void)userPictureUpload:(NSString *)picture_base64;
+- (void)updateSetting:(NSString *)profilename email:(NSString *)email website:(NSString *)website tel:(NSString *)tel gender:(NSString *)gender birthday:(NSString *)birthday;
+- (void)changePassword:(NSString *)old_password new_password:(NSString *)new_password;
+
+- (void)settingNews:(NSString *)status;
+- (void)settingMessage:(NSString *)status;
 
 #pragma mark - Feed
 - (void)getFeed:(NSString *)limit link:(NSString *)link;
