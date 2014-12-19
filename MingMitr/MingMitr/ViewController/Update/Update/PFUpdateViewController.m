@@ -43,6 +43,8 @@ NSTimer *timmer;
     
     [self.Api getFeed:@"15" link:@"NO"];
     
+    NSLog(@"%@",[self.Api getUserId]);
+    
     // Navbar setup
     [[self.navController navigationBar] setBarTintColor:[UIColor colorWithRed:229.0f/255.0f green:172.0f/255.0f blue:48.0f/255.0f alpha:1.0f]];
     

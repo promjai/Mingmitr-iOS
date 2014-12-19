@@ -43,7 +43,7 @@ static int const BBoriginY = -9;
 - (void)initializer
 {
     // Default design initialization
-    self.badgeBGColor   = [UIColor blackColor];
+    self.badgeBGColor   = [UIColor redColor];
     self.badgeTextColor = [UIColor whiteColor];
     self.badgeFont      = [UIFont systemFontOfSize:12.0];
     self.shouldHideBadgeAtZero = YES;

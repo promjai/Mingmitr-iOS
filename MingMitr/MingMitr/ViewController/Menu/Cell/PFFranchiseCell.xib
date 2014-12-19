@@ -41,8 +41,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="detail" destination="Wk1-pN-8YG" id="39P-O4-aip"/>
-                <outlet property="image" destination="wYM-tm-HDc" id="HrO-L9-Dxy"/>
                 <outlet property="name" destination="f7S-Hx-toN" id="tb2-ee-d8N"/>
+                <outlet property="thumbnails" destination="wYM-tm-HDc" id="ffw-MA-Kk4"/>
             </connections>
         </tableViewCell>
     </objects>

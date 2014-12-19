@@ -10,7 +10,7 @@
 
 @interface PFFolderCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *thumbnails;
-@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (strong, nonatomic) IBOutlet UIImageView *thumbnails;
+@property (strong, nonatomic) IBOutlet UILabel *name;
 
 @end

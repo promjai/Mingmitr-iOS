@@ -199,6 +199,7 @@ BOOL refreshDataFolder;
         }
         self.navigationItem.title = @" ";
         menuDetail.obj = [self.arrObj objectAtIndex:indexPath.row];
+        menuDetail.type = self.type;
         menuDetail.delegate = self;
         [self.navigationController pushViewController:menuDetail animated:YES];
         
@@ -224,6 +225,7 @@ BOOL refreshDataFolder;
             }
             self.navigationItem.title = @" ";
             folderDetail.obj = [self.arrObj objectAtIndex:indexPath.row];
+            folderDetail.type = self.type;
             folderDetail.delegate = self;
             [self.navigationController pushViewController:folderDetail animated:YES];
         }

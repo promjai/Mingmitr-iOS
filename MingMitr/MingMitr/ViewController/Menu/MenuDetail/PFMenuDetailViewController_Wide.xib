@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PFMenuDetailViewController">
             <connections>
+                <outlet property="baht" destination="8ju-zw-OSc" id="oMu-Dw-uR6"/>
+                <outlet property="baht1" destination="yDZ-e5-3gv" id="m41-EX-Ss0"/>
                 <outlet property="detail" destination="CRn-Zl-lPT" id="slv-fY-qUX"/>
                 <outlet property="detail1" destination="0hO-kI-q71" id="wxH-XS-PfC"/>
                 <outlet property="headerImgView" destination="qgr-3g-5qm" id="qbk-WU-QVs"/>

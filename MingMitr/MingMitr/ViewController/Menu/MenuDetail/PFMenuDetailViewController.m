@@ -49,6 +49,20 @@
     NSString *id = [NSString stringWithFormat:@"%@",[self.obj objectForKey:@"id"]];
     [self.Api getMenuPictureById:id];
     
+    if ([self.type isEqualToString:@"Franchise"]) {
+        self.price.hidden = YES;
+        self.price1.hidden = YES;
+        
+        self.baht.hidden = YES;
+        self.baht1.hidden = YES;
+    } else {
+        self.price.hidden = NO;
+        self.price1.hidden = NO;
+        
+        self.baht.hidden = NO;
+        self.baht1.hidden = NO;
+    }
+    
     NSString *price = [[NSString alloc] initWithFormat:@"%@",[self.obj objectForKey:@"price"]];
     
     self.name.text = [self.obj objectForKey:@"name"];

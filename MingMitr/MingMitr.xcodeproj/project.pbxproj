@@ -148,6 +148,8 @@
 		81B4EBBC1A43EBAF00814FAB /* PFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B4EB9E1A43EBAF00814FAB /* PFWebViewController.m */; };
 		81B4EBBD1A43EBAF00814FAB /* PFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B4EB9F1A43EBAF00814FAB /* PFWebViewController.xib */; };
 		81B4EBBE1A43EBAF00814FAB /* PFWebViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B4EBA01A43EBAF00814FAB /* PFWebViewController_Wide.xib */; };
+		81B4EBC31A442DDD00814FAB /* PFMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B4EBC11A442DDD00814FAB /* PFMemberViewController.m */; };
+		81B4EBC41A442DDD00814FAB /* PFMemberViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B4EBC21A442DDD00814FAB /* PFMemberViewController_Wide.xib */; };
 		81C2B03C1A42CA78005D938B /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C2B03A1A42CA78005D938B /* logo@2x.png */; };
 		81C2B03F1A42CA92005D938B /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81C2B03E1A42CA92005D938B /* logo@3x.png */; };
 		81CB71781A401114006422C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB71771A401114006422C6 /* main.m */; };
@@ -224,8 +226,6 @@
 		81CB72B61A40118A006422C6 /* UILabel+UILabelDynamicHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB723C1A40118A006422C6 /* UILabel+UILabelDynamicHeight.m */; };
 		81CB72D11A40118A006422C6 /* TabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB725D1A40118A006422C6 /* TabBarItemButton.m */; };
 		81CB72D21A40118A006422C6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB725F1A40118A006422C6 /* TabBarViewController.m */; };
-		81CB72D51A40118A006422C6 /* PFMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB72671A40118A006422C6 /* PFMemberViewController.m */; };
-		81CB72D61A40118A006422C6 /* PFMemberViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81CB72681A40118A006422C6 /* PFMemberViewController_Wide.xib */; };
 		81CB72DE1A401A2C006422C6 /* PFApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB72DD1A401A2C006422C6 /* PFApi.m */; };
 		81CB72E31A401BBD006422C6 /* PFUpdateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB72E11A401BBD006422C6 /* PFUpdateCell.m */; };
 		81CB72E41A401BBD006422C6 /* PFUpdateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81CB72E21A401BBD006422C6 /* PFUpdateCell.xib */; };
@@ -434,6 +434,9 @@
 		81B4EB9E1A43EBAF00814FAB /* PFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFWebViewController.m; sourceTree = "<group>"; };
 		81B4EB9F1A43EBAF00814FAB /* PFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFWebViewController.xib; sourceTree = "<group>"; };
 		81B4EBA01A43EBAF00814FAB /* PFWebViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFWebViewController_Wide.xib; sourceTree = "<group>"; };
+		81B4EBC01A442DDD00814FAB /* PFMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMemberViewController.h; sourceTree = "<group>"; };
+		81B4EBC11A442DDD00814FAB /* PFMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMemberViewController.m; sourceTree = "<group>"; };
+		81B4EBC21A442DDD00814FAB /* PFMemberViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMemberViewController_Wide.xib; sourceTree = "<group>"; };
 		81C2B03A1A42CA78005D938B /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		81C2B03E1A42CA92005D938B /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		81CB71721A401114006422C6 /* MingMitr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MingMitr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -591,9 +594,6 @@
 		81CB725D1A40118A006422C6 /* TabBarItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarItemButton.m; sourceTree = "<group>"; };
 		81CB725E1A40118A006422C6 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		81CB725F1A40118A006422C6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		81CB72661A40118A006422C6 /* PFMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMemberViewController.h; sourceTree = "<group>"; };
-		81CB72671A40118A006422C6 /* PFMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMemberViewController.m; sourceTree = "<group>"; };
-		81CB72681A40118A006422C6 /* PFMemberViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMemberViewController_Wide.xib; sourceTree = "<group>"; };
 		81CB72DB1A401193006422C6 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		81CB72DC1A401A2C006422C6 /* PFApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFApi.h; sourceTree = "<group>"; };
 		81CB72DD1A401A2C006422C6 /* PFApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFApi.m; sourceTree = "<group>"; };
@@ -665,13 +665,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8161D9181A42ABA10062DB4B /* FranchiseDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FranchiseDetail;
-			sourceTree = "<group>";
-		};
 		8161D99D1A42BB640062DB4B /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1019,6 +1012,16 @@
 				81B4EB9C1A43EBAF00814FAB /* icon_reload@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		81B4EBBF1A442DDD00814FAB /* Menber */ = {
+			isa = PBXGroup;
+			children = (
+				81B4EBC01A442DDD00814FAB /* PFMemberViewController.h */,
+				81B4EBC11A442DDD00814FAB /* PFMemberViewController.m */,
+				81B4EBC21A442DDD00814FAB /* PFMemberViewController_Wide.xib */,
+			);
+			path = Menber;
 			sourceTree = "<group>";
 		};
 		81CB71691A401114006422C6 = {
@@ -1412,9 +1415,7 @@
 		81CB72651A40118A006422C6 /* Member */ = {
 			isa = PBXGroup;
 			children = (
-				81CB72661A40118A006422C6 /* PFMemberViewController.h */,
-				81CB72671A40118A006422C6 /* PFMemberViewController.m */,
-				81CB72681A40118A006422C6 /* PFMemberViewController_Wide.xib */,
+				81B4EBBF1A442DDD00814FAB /* Menber */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -1426,7 +1427,6 @@
 				8162764F1A41870E008F2043 /* Menu */,
 				81DE35031A42875C00159412 /* Foldertype */,
 				81DE351A1A4290F700159412 /* MenuDetail */,
-				8161D9181A42ABA10062DB4B /* FranchiseDetail */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -1684,7 +1684,6 @@
 				81B4EBB81A43EBAF00814FAB /* PFMapAllViewController.xib in Resources */,
 				81B4EB641A43E23900814FAB /* ic_numbers@2x.png in Resources */,
 				81B4EBAF1A43EBAF00814FAB /* PFBranchTelephoneViewController_Wide.xib in Resources */,
-				81CB72D61A40118A006422C6 /* PFMemberViewController_Wide.xib in Resources */,
 				816276361A414669008F2043 /* en_menu_on.png in Resources */,
 				81B4EB681A43E23900814FAB /* ic_powered_dark@2x.png in Resources */,
 				81B4EBBA1A43EBAF00814FAB /* icon_reload.png in Resources */,
@@ -1705,6 +1704,7 @@
 				81B4EB5E1A43E23900814FAB /* ic_email@2x.png in Resources */,
 				816276411A4147B4008F2043 /* PFUpdateViewController_Wide.xib in Resources */,
 				81CB73061A40232E006422C6 /* en_contact_on.png in Resources */,
+				81B4EBC41A442DDD00814FAB /* PFMemberViewController_Wide.xib in Resources */,
 				8161DA961A42C3370062DB4B /* PFEditDetailViewController.xib in Resources */,
 				81CB72871A40118A006422C6 /* .gitignore in Resources */,
 				8161D9B61A42BB640062DB4B /* bt_fill_username@2x.png in Resources */,
@@ -1797,8 +1797,8 @@
 				81CB72951A40118A006422C6 /* PSTCollectionViewCell.m in Sources */,
 				81CB72831A40118A006422C6 /* DLILCacheManager.m in Sources */,
 				81B4EBA81A43EBAF00814FAB /* PFBranchesViewController.m in Sources */,
+				81B4EBC31A442DDD00814FAB /* PFMemberViewController.m in Sources */,
 				816276401A4147B4008F2043 /* PFUpdateViewController.m in Sources */,
-				81CB72D51A40118A006422C6 /* PFMemberViewController.m in Sources */,
 				81CB72851A40118A006422C6 /* DLImageLoader.m in Sources */,
 				81B4EBA11A43EBAF00814FAB /* PFBranchDetailViewController.m in Sources */,
 				816276571A41870E008F2043 /* PFFolderCell.m in Sources */,

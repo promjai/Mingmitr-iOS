@@ -39,6 +39,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) NSString *type;
+
 @property (strong, nonatomic) NSString *titlename;
 @property (strong, nonatomic) NSString *folder_id;
 

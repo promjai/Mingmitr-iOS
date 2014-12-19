@@ -50,14 +50,18 @@
 @property (strong, nonatomic) NSMutableArray *arrgalleryimg;
 @property (strong, nonatomic) NSString *current;
 
+@property (strong, nonatomic) NSString *type;
+
 @property (strong, nonatomic) IBOutlet UILabel_UILabelDynamicHeight *name;
 @property (strong, nonatomic) IBOutlet UILabel_UILabelDynamicHeight *detail;
 @property (strong, nonatomic) IBOutlet UILabel *price;
+@property (strong, nonatomic) IBOutlet UILabel *baht;
 
 @property (strong, nonatomic) IBOutlet AsyncImageView *imageView1;
 @property (strong, nonatomic) IBOutlet UILabel_UILabelDynamicHeight *name1;
 @property (strong, nonatomic) IBOutlet UILabel_UILabelDynamicHeight *detail1;
 @property (strong, nonatomic) IBOutlet UILabel *price1;
+@property (strong, nonatomic) IBOutlet UILabel *baht1;
 
 -(void)ShowDetailView:(UIImageView *)imgView;
 

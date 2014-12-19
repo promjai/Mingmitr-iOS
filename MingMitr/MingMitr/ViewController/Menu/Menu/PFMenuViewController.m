@@ -711,9 +711,9 @@ NSTimer *timmer;
             
         } else {
             
-            PFProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PFProductCell"];
+            PFFranchiseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PFFranchiseCell"];
             if(cell == nil) {
-                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PFProductCell" owner:self options:nil];
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PFFranchiseCell" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
             }
             
@@ -729,9 +729,6 @@ NSTimer *timmer;
             
             cell.name.text = [[self.arrObjFranchise objectAtIndex:indexPath.row] objectForKey:@"name"];
             cell.detail.text = [[self.arrObjFranchise objectAtIndex:indexPath.row] objectForKey:@"detail"];
-            
-            NSString *price = [[NSString alloc] initWithFormat:@"%@",[[self.arrObjFranchise objectAtIndex:indexPath.row] objectForKey:@"price"]];
-            cell.price.text = price;
             
             return cell;
             
@@ -772,6 +769,7 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjDrink objectAtIndex:indexPath.row];
+                folderDetail.type = @"Drink";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -789,6 +787,7 @@ NSTimer *timmer;
             }
             self.navItem.title = @" ";
             menuDetail.obj = [self.arrObjDrink objectAtIndex:indexPath.row];
+            menuDetail.type = @"Drink";
             menuDetail.delegate = self;
             [self.navController pushViewController:menuDetail animated:YES];
             
@@ -819,6 +818,7 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjDessert objectAtIndex:indexPath.row];
+                folderDetail.type = @"Dessert";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -836,6 +836,7 @@ NSTimer *timmer;
             }
             self.navItem.title = @" ";
             menuDetail.obj = [self.arrObjDessert objectAtIndex:indexPath.row];
+            menuDetail.type = @"Dessert";
             menuDetail.delegate = self;
             [self.navController pushViewController:menuDetail animated:YES];
             
@@ -866,6 +867,7 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjBeans objectAtIndex:indexPath.row];
+                folderDetail.type = @"Beans";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -883,12 +885,62 @@ NSTimer *timmer;
             }
             self.navItem.title = @" ";
             menuDetail.obj = [self.arrObjBeans objectAtIndex:indexPath.row];
+            menuDetail.type = @"Beans";
             menuDetail.delegate = self;
             [self.navController pushViewController:menuDetail animated:YES];
             
         }
         
     } else {
+        
+        if ([[[self.arrObjFranchise objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"folder"]) {
+            
+            NSString *children_length = [[NSString alloc] initWithFormat:@"%@",[[self.arrObjFranchise objectAtIndex:indexPath.row] objectForKey:@"children_length"]];
+            
+            if ([children_length isEqualToString:@"0"]) {
+                
+                [[[UIAlertView alloc] initWithTitle:@"Mingmitr!"
+                                            message:@"Coming soon."
+                                           delegate:nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil] show];
+                
+            } else {
+                [self.delegate HideTabbar];
+                
+                PFDetailFoldertypeViewController *folderDetail = [[PFDetailFoldertypeViewController alloc] init];
+                if(IS_WIDESCREEN) {
+                    folderDetail = [[PFDetailFoldertypeViewController alloc] initWithNibName:@"PFDetailFoldertypeViewController_Wide" bundle:nil];
+                } else {
+                    folderDetail = [[PFDetailFoldertypeViewController alloc] initWithNibName:@"PFDetailFoldertypeViewController" bundle:nil];
+                }
+                self.navItem.title = @" ";
+                folderDetail.obj = [self.arrObjFranchise objectAtIndex:indexPath.row];
+                folderDetail.type = @"Franchise";
+                folderDetail.delegate = self;
+                [self.navController pushViewController:folderDetail animated:YES];
+            }
+            
+            
+        } else {
+            
+            [self.delegate HideTabbar];
+            
+            PFMenuDetailViewController *menuDetail = [[PFMenuDetailViewController alloc] init];
+            if(IS_WIDESCREEN) {
+                menuDetail = [[PFMenuDetailViewController alloc] initWithNibName:@"PFMenuDetailViewController_Wide" bundle:nil];
+            } else {
+                menuDetail = [[PFMenuDetailViewController alloc] initWithNibName:@"PFMenuDetailViewController" bundle:nil];
+            }
+            self.navItem.title = @" ";
+            menuDetail.obj = [self.arrObjFranchise objectAtIndex:indexPath.row];
+            menuDetail.type = @"Franchise";
+            menuDetail.delegate = self;
+            [self.navController pushViewController:menuDetail animated:YES];
+            
+        }
+
+        
     }
     
 }
