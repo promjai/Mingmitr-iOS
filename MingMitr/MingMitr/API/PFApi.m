@@ -216,6 +216,64 @@
     
 }
 
+#pragma mark - Feed Notification
+- (void)getNotification:(NSString *)limit link:(NSString *)link {
+    
+    if ([link isEqualToString:@"NO"] ) {
+        self.urlStr = [[NSString alloc] initWithFormat:@"%@user/notify?limit=%@",API_URL,limit];
+    } else if ([limit isEqualToString:@"NO"]) {
+        self.urlStr = link;
+    }
+    
+    NSDictionary *parameters = @{@"access_token":[self getAccessToken]};
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager GET:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getNotificationResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getNotificationErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)checkBadge {
+    
+    if ([[self.userDefaults objectForKey:@"access_token"] length] != 0) {
+        
+        NSString *strUrl = [[NSString alloc] initWithFormat:@"%@user/notify/unopened",API_URL];
+        
+        self.manager = [AFHTTPRequestOperationManager manager];
+        self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+        
+        NSDictionary *parameters = @{@"access_token":[self getAccessToken]};
+        
+        [self.manager  GET:strUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [self.delegate PFApi:self checkBadgeResponse:responseObject];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [self.delegate PFApi:self checkBadgeErrorResponse:[error localizedDescription]];
+        }];
+    }
+    
+}
+
+- (void)clearBadge {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/notify/clear_badge",API_URL];
+    
+    NSDictionary *parameters = @{@"access_token":[self getAccessToken]};
+    
+    [self.manager GET:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"clear : %@",responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
 #pragma mark - Menu
 - (void)getDrink:(NSString *)limit link:(NSString *)link {
 

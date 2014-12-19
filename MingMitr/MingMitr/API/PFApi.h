@@ -37,6 +37,13 @@
 - (void)PFApi:(id)sender getFeedResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getFeedErrorResponse:(NSString *)errorResponse;
 
+#pragma mark - Overview Notification Protocal Delegate
+- (void)PFApi:(id)sender getNotificationResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getNotificationErrorResponse:(NSString *)errorResponse;
+
+- (void)PFApi:(id)sender checkBadgeResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender checkBadgeErrorResponse:(NSString *)errorResponse;
+
 #pragma mark - Menu Protocal Delegate
 - (void)PFApi:(id)sender getDrinkResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getDrinkErrorResponse:(NSString *)errorResponse;
@@ -100,6 +107,11 @@
 
 #pragma mark - Feed
 - (void)getFeed:(NSString *)limit link:(NSString *)link;
+
+#pragma mark - Feed Notification
+- (void)getNotification:(NSString *)limit link:(NSString *)link;
+- (void)checkBadge;
+- (void)clearBadge;
 
 #pragma mark - Menu
 - (void)getDrink:(NSString *)limit link:(NSString *)link;

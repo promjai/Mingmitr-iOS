@@ -14,8 +14,14 @@
 
 #import "PFUpdateCell.h"
 
+//#import "PFUpdateDetailViewController.h"
+#import "PFLoginViewController.h"
+#import "PFAccountViewController.h"
+#import "PFNotificationViewController.h"
+
 @protocol PFUpdateViewControllerDelegate <NSObject>
 
+- (void)PFImageViewController:(id)sender viewPicture:(UIImage *)image;
 - (void)HideTabbar;
 - (void)ShowTabbar;
 
@@ -30,12 +36,13 @@
 
 @property NSUserDefaults *feedOffline;
 
+@property (strong, nonatomic) PFLoginViewController *loginView;
+
 @property (strong, nonatomic) IBOutlet UINavigationController *navController;
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
-@property (strong, nonatomic) UIImageView *popupProgressBar;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) IBOutlet UIView *NoInternetView;
