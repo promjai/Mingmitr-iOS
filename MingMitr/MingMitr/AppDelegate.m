@@ -55,7 +55,7 @@ BOOL newMedia;
     self.update.delegate = self;
     self.menu.delegate = self;
     //self.member.delegate = self;
-    //self.contact.delegate = self;
+    self.contact.delegate = self;
     
     TabBarItemButton *item0 = [self.tabBarViewController.itemButtons objectAtIndex:0];
     [item0 setHighlightedImage:[UIImage imageNamed:@"en_update_on"]];

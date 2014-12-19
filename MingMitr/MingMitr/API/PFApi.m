@@ -362,4 +362,39 @@
     
 }
 
+#pragma mark - Contact
+- (void)getContact {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@contact",API_URL];
+    
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getContactResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getContactErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)getContactBranches {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@contact/branches",API_URL];
+    
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getContactBranchesResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getContactBranchesErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)getBranchTelephone:(NSString *)branch_id {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@contact/branches/%@/tel",API_URL,branch_id];
+    
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getBranchTelephoneResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getBranchTelephoneErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
 @end

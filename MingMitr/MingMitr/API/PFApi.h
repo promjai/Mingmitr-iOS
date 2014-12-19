@@ -63,6 +63,16 @@
 - (void)PFApi:(id)sender getMenuPictureByIdResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getMenuPictureByIdErrorResponse:(NSString *)errorResponse;
 
+#pragma mark - Contact Protocal Delegate
+- (void)PFApi:(id)sender getContactResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getContactErrorResponse:(NSString *)errorResponse;
+
+- (void)PFApi:(id)sender getContactBranchesResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getContactBranchesErrorResponse:(NSString *)errorResponse;
+
+- (void)PFApi:(id)sender getBranchTelephoneResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getBranchTelephoneErrorResponse:(NSString *)errorResponse;
+
 @end
 
 @interface PFApi : NSObject
@@ -122,5 +132,10 @@
 - (void)getFolderTypeByURL:(NSString *)url;
 
 - (void)getMenuPictureById:(NSString *)picture_id;
+
+#pragma mark - Contact
+- (void)getContact;
+- (void)getContactBranches;
+- (void)getBranchTelephone:(NSString *)branch_id;
 
 @end
