@@ -10,6 +10,7 @@
                 <outlet property="navBar" destination="tk1-W8-VHH" id="yXI-aN-2cO"/>
                 <outlet property="navController" destination="UpY-wY-ft2" id="G8y-y4-Ooy"/>
                 <outlet property="navItem" destination="1F2-KE-y4G" id="Dlu-Jd-5x7"/>
+                <outlet property="popupwaitView" destination="Fcc-4V-fJu" id="65R-kY-Gjd"/>
                 <outlet property="segmented" destination="tli-gV-5Rq" id="xUd-Ui-kuG"/>
                 <outlet property="tableView" destination="Y3b-LB-ihp" id="KsD-5u-V92"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,15 +22,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-pk-VuT">
-                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-4V-fJu">
+                    <rect key="frame" x="125" y="249" width="70" height="70"/>
                     <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LaB-WY-EKO">
-                            <rect key="frame" x="142" y="201" width="37" height="37"/>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="m4N-sJ-AnH">
+                            <rect key="frame" x="17" y="16" width="37" height="37"/>
                             <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </activityIndicatorView>
                     </subviews>
-                    <color key="backgroundColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

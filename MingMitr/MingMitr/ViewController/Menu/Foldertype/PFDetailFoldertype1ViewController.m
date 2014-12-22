@@ -37,6 +37,10 @@ BOOL refreshDataFolder;
     
     [self.view addSubview:self.waitView];
     
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+    
     self.arrObj = [[NSMutableArray alloc] init];
     
     loadFolder = NO;
@@ -199,7 +203,6 @@ BOOL refreshDataFolder;
         }
         self.navigationItem.title = @" ";
         menuDetail.obj = [self.arrObj objectAtIndex:indexPath.row];
-        menuDetail.type = self.type;
         menuDetail.delegate = self;
         [self.navigationController pushViewController:menuDetail animated:YES];
         
@@ -225,7 +228,6 @@ BOOL refreshDataFolder;
             }
             self.navigationItem.title = @" ";
             folderDetail.obj = [self.arrObj objectAtIndex:indexPath.row];
-            folderDetail.type = self.type;
             folderDetail.delegate = self;
             [self.navigationController pushViewController:folderDetail animated:YES];
         }
@@ -263,6 +265,11 @@ BOOL refreshDataFolder;
 }
 
 - (void)PFMenuDetailViewControllerBack {
+    self.navigationItem.title = [self.obj objectForKey:@"name"];
+    [self.tableView reloadData];
+}
+
+- (void)PFFranchiseDetailViewControllerBack {
     self.navigationItem.title = [self.obj objectForKey:@"name"];
     [self.tableView reloadData];
 }

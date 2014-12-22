@@ -12,6 +12,8 @@
 
 #import "PFApi.h"
 
+#import "PFUpdateDetailViewController.h"
+
 @protocol PFNotificationViewControllerDelegate <NSObject>
 
 - (void)PFImageViewController:(id)sender viewPicture:(UIImage *)image;
@@ -30,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (weak, nonatomic) IBOutlet UIView *popupwaitView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) NSMutableArray *arrObj;

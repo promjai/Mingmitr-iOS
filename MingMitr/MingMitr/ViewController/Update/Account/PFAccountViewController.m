@@ -34,6 +34,10 @@ NSString *removeBreckets;
     
     [self.view addSubview:self.waitView];
     
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+    
     self.Api = [[PFApi alloc] init];
     self.Api.delegate = self;
     

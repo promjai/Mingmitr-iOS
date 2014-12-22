@@ -25,6 +25,7 @@
                 <outlet property="navItem" destination="7hx-Ky-XeG" id="Lt3-rK-KnZ"/>
                 <outlet property="password" destination="qcc-ur-9LW" id="GfQ-73-TI7"/>
                 <outlet property="passwordView" destination="92S-oU-UD0" id="15N-e3-Oxp"/>
+                <outlet property="popupwaitView" destination="CN3-Bl-g7d" id="r2q-I5-CjO"/>
                 <outlet property="tableView" destination="Usd-WN-K8n" id="HBl-ga-5ig"/>
                 <outlet property="tel" destination="DaR-aL-rjW" id="UUg-AU-XnZ"/>
                 <outlet property="thumUser" destination="ZJM-rA-m9R" id="NEi-Dy-fCd"/>
@@ -38,10 +39,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-L0-80u">
-                    <rect key="frame" x="142" y="265" width="37" height="37"/>
-                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                </activityIndicatorView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CN3-Bl-g7d">
+                    <rect key="frame" x="125" y="249" width="70" height="70"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="66q-pc-k6t">
+                            <rect key="frame" x="17" y="16" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>

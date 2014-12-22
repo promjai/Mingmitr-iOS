@@ -39,6 +39,10 @@
     self.webView.delegate = self;
     self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:req];
+    
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
 }
 
 - (void)didReceiveMemoryWarning {

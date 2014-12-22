@@ -209,13 +209,9 @@ NSString *password;
         self.menu = @"";
         [self.delegate PFNotificationViewController:self];
     
-    } else if ([self.menu isEqualToString:@"comment"]) {
+    } else if ([self.menu isEqualToString:@"member"]) {
         self.menu = @"";
-        [self.delegate PFCommentViewController:self];
-        
-    } else if ([self.menu isEqualToString:@"coupon"]) {
-        self.menu = @"";
-        [self.delegate PFCouponViewController:self];
+        [self.delegate PFMemberViewController:self];
         
     }
     
@@ -278,13 +274,9 @@ NSString *password;
             self.menu = @"";
             [self.delegate PFNotificationViewController:self];
             
-        } else if ([self.menu isEqualToString:@"comment"]) {
+        } else if ([self.menu isEqualToString:@"member"]) {
             self.menu = @"";
-            [self.delegate PFCommentViewController:self];
-            
-        } else if ([self.menu isEqualToString:@"coupon"]) {
-            self.menu = @"";
-            [self.delegate PFCouponViewController:self];
+            [self.delegate PFMemberViewController:self];
             
         }
         

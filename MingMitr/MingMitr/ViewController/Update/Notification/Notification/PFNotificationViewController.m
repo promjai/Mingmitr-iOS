@@ -36,6 +36,10 @@ BOOL refreshDataNoti;
     
     [self.view addSubview:self.waitView];
     
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+    
     self.Api = [[PFApi alloc] init];
     self.Api.delegate = self;
 
@@ -131,27 +135,27 @@ BOOL refreshDataNoti;
     [self.tableView reloadData];
 }
 
-////feed
-//
-//- (void)PFApi:(id)sender getFeedByIdResponse:(NSDictionary *)response {
-//    //NSLog(@"%@",response);
-//    
-//    PFUpdateDetailViewController *updatedetail = [[PFUpdateDetailViewController alloc] init];
-//    
-//    if(IS_WIDESCREEN){
-//        updatedetail = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController_Wide" bundle:nil];
-//    } else {
-//        updatedetail = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController" bundle:nil];
-//    }
-//    self.navigationItem.title = @" ";
-//    updatedetail.obj = response;
-//    updatedetail.delegate = self;
-//    [self.navigationController pushViewController:updatedetail animated:YES];
-//}
-//
-//- (void)PFApi:(id)sender getFeedByIdErrorResponse:(NSString *)errorResponse {
-//    NSLog(@"%@",errorResponse);
-//}
+//feed
+
+- (void)PFApi:(id)sender getFeedByIdResponse:(NSDictionary *)response {
+    //NSLog(@"%@",response);
+    
+    PFUpdateDetailViewController *updatedetail = [[PFUpdateDetailViewController alloc] init];
+    
+    if(IS_WIDESCREEN){
+        updatedetail = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController_Wide" bundle:nil];
+    } else {
+        updatedetail = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController" bundle:nil];
+    }
+    self.navigationItem.title = @" ";
+    updatedetail.obj = response;
+    updatedetail.delegate = self;
+    [self.navigationController pushViewController:updatedetail animated:YES];
+}
+
+- (void)PFApi:(id)sender getFeedByIdErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
+}
 
 //table
 
@@ -191,38 +195,26 @@ BOOL refreshDataNoti;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    NSString *type = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"type"];
-//    
-//    if ( [type isEqualToString:@"news"] ) {
-//        
-//        [self.Api getFeedById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
-//        
-//    } else if ( [type isEqualToString:@"promotion"] ) {
-//        
-//        [self.Api getPromotionById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
-//        
-//    } else if ( [type isEqualToString:@"coupon"] ) {
-//        
-//        [self.Api getCouponById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
-//        
-//    } else if ( [type isEqualToString:@"message"] ) {
-//    
-//        [self.Api getMessageById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
-//    
-//    }
-//    
-//    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@user/notify/read/%@",API_URL,[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"id"]];
-//    
-//    NSDictionary *parameters = @{@"access_token":[self.Api getAccessToken]};
-//    self.manager = [AFHTTPRequestOperationManager manager];
-//    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
-//    self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
-//    [self.manager GET:urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"%@",responseObject);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"%@",error);
-//    }];
+    NSString *type = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"type"];
+    
+    if ( [type isEqualToString:@"news"] ) {
+        
+        [self.Api getFeedById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
+        
+    }
+    
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@user/notify/read/%@",API_URL,[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"id"]];
+    
+    NSDictionary *parameters = @{@"access_token":[self.Api getAccessToken]};
+    self.manager = [AFHTTPRequestOperationManager manager];
+    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.manager.requestSerializer setValue:nil forHTTPHeaderField:@"X-Auth-Token"];
+    [self.manager GET:urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@",error);
+    }];
     
 }
 

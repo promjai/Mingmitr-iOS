@@ -34,6 +34,10 @@ NSString *close_bt;
     
     [self.view addSubview:self.waitView];
     
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+    
     // Navbar setup
     [[self.navController navigationBar] setBarTintColor:[UIColor colorWithRed:229.0f/255.0f green:172.0f/255.0f blue:48.0f/255.0f alpha:1.0f]];
     

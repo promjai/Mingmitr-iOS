@@ -157,15 +157,15 @@
         // To address
         NSArray *toRecipents = [self.emailLabel.text componentsSeparatedByString: @","];
         
-        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1.0f]];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:229.0f/255.0f green:172.0f/255.0f blue:48.0f/255.0f alpha:1.0f]];
         
         [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                               [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0], NSForegroundColorAttributeName, nil]];
+                                                               [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
         
         MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
         mc.mailComposeDelegate = self;
         
-        [mc.navigationBar setTintColor:[UIColor redColor]];
+        [mc.navigationBar setTintColor:[UIColor whiteColor]];
         [mc setSubject:emailTitle];
         [mc setMessageBody:messageBody isHTML:NO];
         [mc setToRecipients:toRecipents];

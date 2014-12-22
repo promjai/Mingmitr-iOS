@@ -28,6 +28,7 @@
 @property NSUserDefaults *contactOffline;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (weak, nonatomic) IBOutlet UIView *popupwaitView;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

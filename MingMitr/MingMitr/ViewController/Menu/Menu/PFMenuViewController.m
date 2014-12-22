@@ -41,6 +41,10 @@ NSTimer *timmer;
     
     [self.view addSubview:self.waitView];
     
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+    
     // Navbar setup
     [[self.navController navigationBar] setBarTintColor:[UIColor colorWithRed:229.0f/255.0f green:172.0f/255.0f blue:48.0f/255.0f alpha:1.0f]];
     
@@ -769,7 +773,6 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjDrink objectAtIndex:indexPath.row];
-                folderDetail.type = @"Drink";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -787,7 +790,6 @@ NSTimer *timmer;
             }
             self.navItem.title = @" ";
             menuDetail.obj = [self.arrObjDrink objectAtIndex:indexPath.row];
-            menuDetail.type = @"Drink";
             menuDetail.delegate = self;
             [self.navController pushViewController:menuDetail animated:YES];
             
@@ -818,7 +820,6 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjDessert objectAtIndex:indexPath.row];
-                folderDetail.type = @"Dessert";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -836,7 +837,6 @@ NSTimer *timmer;
             }
             self.navItem.title = @" ";
             menuDetail.obj = [self.arrObjDessert objectAtIndex:indexPath.row];
-            menuDetail.type = @"Dessert";
             menuDetail.delegate = self;
             [self.navController pushViewController:menuDetail animated:YES];
             
@@ -867,7 +867,6 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjBeans objectAtIndex:indexPath.row];
-                folderDetail.type = @"Beans";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -885,7 +884,6 @@ NSTimer *timmer;
             }
             self.navItem.title = @" ";
             menuDetail.obj = [self.arrObjBeans objectAtIndex:indexPath.row];
-            menuDetail.type = @"Beans";
             menuDetail.delegate = self;
             [self.navController pushViewController:menuDetail animated:YES];
             
@@ -916,7 +914,6 @@ NSTimer *timmer;
                 }
                 self.navItem.title = @" ";
                 folderDetail.obj = [self.arrObjFranchise objectAtIndex:indexPath.row];
-                folderDetail.type = @"Franchise";
                 folderDetail.delegate = self;
                 [self.navController pushViewController:folderDetail animated:YES];
             }
@@ -926,17 +923,16 @@ NSTimer *timmer;
             
             [self.delegate HideTabbar];
             
-            PFMenuDetailViewController *menuDetail = [[PFMenuDetailViewController alloc] init];
+            PFFranchiseDetailViewController *franchiseDetail = [[PFFranchiseDetailViewController alloc] init];
             if(IS_WIDESCREEN) {
-                menuDetail = [[PFMenuDetailViewController alloc] initWithNibName:@"PFMenuDetailViewController_Wide" bundle:nil];
+                franchiseDetail = [[PFFranchiseDetailViewController alloc] initWithNibName:@"PFFranchiseDetailViewController_Wide" bundle:nil];
             } else {
-                menuDetail = [[PFMenuDetailViewController alloc] initWithNibName:@"PFMenuDetailViewController" bundle:nil];
+                franchiseDetail = [[PFFranchiseDetailViewController alloc] initWithNibName:@"PFFranchiseDetailViewController" bundle:nil];
             }
             self.navItem.title = @" ";
-            menuDetail.obj = [self.arrObjFranchise objectAtIndex:indexPath.row];
-            menuDetail.type = @"Franchise";
-            menuDetail.delegate = self;
-            [self.navController pushViewController:menuDetail animated:YES];
+            franchiseDetail.obj = [self.arrObjFranchise objectAtIndex:indexPath.row];
+            franchiseDetail.delegate = self;
+            [self.navController pushViewController:franchiseDetail animated:YES];
             
         }
 
@@ -958,17 +954,25 @@ NSTimer *timmer;
             if ([self.checksegmented isEqualToString:@"0"]) {
                 if ([self.checkinternet isEqualToString:@"connect"]) {
                     
+                    [self.Api getDrink:@"NO" link:self.paging];
+                    
                 }
             } else if ([self.checksegmented isEqualToString:@"1"]) {
                 if ([self.checkinternet isEqualToString:@"connect"]) {
+                    
+                    [self.Api getDessert:@"NO" link:self.paging];
                     
                 }
             } else if ([self.checksegmented isEqualToString:@"2"]) {
                 if ([self.checkinternet isEqualToString:@"connect"]) {
                     
+                    [self.Api getBeans:@"NO" link:self.paging];
+                    
                 }
             } else {
                 if ([self.checkinternet isEqualToString:@"connect"]) {
+                    
+                    [self.Api getFranchise:@"NO" link:self.paging];
                     
                 }
             }
@@ -994,6 +998,11 @@ NSTimer *timmer;
 }
 
 - (void)PFMenuDetailViewControllerBack {
+    [self.delegate ShowTabbar];
+    [self.tableView reloadData];
+}
+
+- (void)PFFranchiseDetailViewControllerBack {
     [self.delegate ShowTabbar];
     [self.tableView reloadData];
 }

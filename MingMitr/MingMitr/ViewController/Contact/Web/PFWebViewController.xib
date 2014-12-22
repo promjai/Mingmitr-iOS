@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PFWebViewController">
             <connections>
+                <outlet property="popupwaitView" destination="Mo6-80-CFc" id="u9n-mi-YNa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="waitView" destination="47v-4R-NCw" id="4kV-Be-tOA"/>
                 <outlet property="webView" destination="eFd-ed-Mbb" id="XyT-lJ-3uQ"/>
@@ -16,10 +17,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UDU-7N-GVJ">
-                    <rect key="frame" x="142" y="221" width="37" height="37"/>
-                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                </activityIndicatorView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mo6-80-CFc">
+                    <rect key="frame" x="125" y="205" width="70" height="70"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-R4-c7h">
+                            <rect key="frame" x="17" y="16" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>

@@ -16,6 +16,7 @@
                 <outlet property="messageLabel" destination="KOl-SN-KFM" id="2F3-Sj-Krk"/>
                 <outlet property="newupdateLabel" destination="q4l-sz-0hg" id="hry-Up-Pec"/>
                 <outlet property="notificationLabel" destination="IvD-84-iyw" id="QJj-7u-7PK"/>
+                <outlet property="popupwaitView" destination="Thh-Fk-IcG" id="RTL-Qf-Bqm"/>
                 <outlet property="switchMessage" destination="9Wt-Eh-Ehw" id="3Rx-Uy-pQQ"/>
                 <outlet property="switchNews" destination="7g0-iu-9hc" id="e0s-GO-MPJ"/>
                 <outlet property="tableView" destination="UEi-ir-rHP" id="uNd-7u-L5a"/>
@@ -29,13 +30,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" id="4B1-7I-LKN">
-                    <rect key="frame" x="142" y="265" width="37" height="37"/>
+                <view contentMode="scaleToFill" id="Thh-Fk-IcG">
+                    <rect key="frame" x="125" y="249" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                </activityIndicatorView>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" id="dgm-tT-umo">
+                            <rect key="frame" x="17" y="16" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

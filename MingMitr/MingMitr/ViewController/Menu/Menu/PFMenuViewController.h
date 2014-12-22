@@ -17,6 +17,7 @@
 
 #import "PFDetailFoldertypeViewController.h"
 #import "PFMenuDetailViewController.h"
+#import "PFFranchiseDetailViewController.h"
 
 @protocol PFMenuViewControllerDelegate <NSObject>
 
@@ -52,6 +53,7 @@
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (weak, nonatomic) IBOutlet UIView *popupwaitView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) IBOutlet UIView *NoInternetView;

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PFBranchTelephoneViewController">
             <connections>
+                <outlet property="popupwaitView" destination="bTG-mS-GEf" id="5sq-r8-0cb"/>
                 <outlet property="tableView" destination="fIJ-iZ-Acd" id="aux-BG-8kz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="waitView" destination="keh-Fq-y0f" id="ATA-2a-wjZ"/>
@@ -16,12 +17,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rtE-i7-1g7">
-                    <rect key="frame" x="142" y="221" width="37" height="37"/>
-                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                </activityIndicatorView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-mS-GEf">
+                    <rect key="frame" x="125" y="205" width="70" height="70"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Bm7-Jl-YMQ">
+                            <rect key="frame" x="17" y="16" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
@@ -68,7 +75,7 @@
                     <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

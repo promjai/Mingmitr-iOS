@@ -36,8 +36,7 @@ NSTimer *timmer;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
-    [self.view addSubview:self.waitView];
+    self.navItem.title = @"Contact";
     
     self.Api = [[PFApi alloc] init];
     self.Api.delegate = self;
@@ -69,6 +68,12 @@ NSTimer *timmer;
     self.tableView.tableHeaderView = self.headerView;
     UIView *fv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     self.tableView.tableFooterView = fv;
+    
+    [self.view addSubview:self.waitView];
+    
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
     
     [self.branchBt.layer setMasksToBounds:YES];
     [self.branchBt.layer setCornerRadius:5.0f];

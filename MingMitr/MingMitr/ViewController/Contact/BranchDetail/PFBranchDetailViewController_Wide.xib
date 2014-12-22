@@ -14,7 +14,7 @@
                 <outlet property="emailLabel" destination="xS4-sn-3gN" id="VWi-uj-6gY"/>
                 <outlet property="faxLabel" destination="h42-DF-D8H" id="c3g-BD-Ck1"/>
                 <outlet property="headerView" destination="6Em-sI-c9b" id="OH4-K5-VAo"/>
-                <outlet property="imgscrollview" destination="u8d-6T-um8" id="z0h-xt-sqL"/>
+                <outlet property="imgscrollview" destination="u8d-6T-um8" id="Pda-Qa-wXy"/>
                 <outlet property="mapImg" destination="dWd-dI-tW2" id="F1u-J2-Sa1"/>
                 <outlet property="tableView" destination="5FP-Sa-khf" id="ZWt-Ln-X6z"/>
                 <outlet property="telephoneLabel" destination="094-ys-Djp" id="y39-gr-gKL"/>
@@ -31,7 +31,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="218" y="364"/>
         </view>
@@ -171,7 +171,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="592" y="327.5"/>

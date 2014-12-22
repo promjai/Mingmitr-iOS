@@ -36,7 +36,13 @@ NSTimer *timmer;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.navItem.title = @"Update";
+    
     [self.view addSubview:self.waitView];
+    
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
     
     self.Api = [[PFApi alloc] init];
     self.Api.delegate = self;
@@ -354,19 +360,19 @@ NSTimer *timmer;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    [self.NoInternetView removeFromSuperview];
-//    [self.delegate HideTabbar];
-//    
-//    PFUpdateDetailViewController *detailView = [[PFUpdateDetailViewController alloc] init];
-//    if(IS_WIDESCREEN) {
-//        detailView = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController_Wide" bundle:nil];
-//    } else {
-//        detailView = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController" bundle:nil];
-//    }
-//    self.navItem.title = @" ";
-//    detailView.obj = [self.arrObj objectAtIndex:indexPath.row];
-//    detailView.delegate = self;
-//    [self.navController pushViewController:detailView animated:YES];
+    [self.NoInternetView removeFromSuperview];
+    [self.delegate HideTabbar];
+    
+    PFUpdateDetailViewController *detailView = [[PFUpdateDetailViewController alloc] init];
+    if(IS_WIDESCREEN) {
+        detailView = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController_Wide" bundle:nil];
+    } else {
+        detailView = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController" bundle:nil];
+    }
+    self.navItem.title = @" ";
+    detailView.obj = [self.arrObj objectAtIndex:indexPath.row];
+    detailView.delegate = self;
+    [self.navController pushViewController:detailView animated:YES];
     
 }
 

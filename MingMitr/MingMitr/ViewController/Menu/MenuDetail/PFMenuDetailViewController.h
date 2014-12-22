@@ -41,6 +41,7 @@
 @property NSUserDefaults *catalogDetailOffline;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (weak, nonatomic) IBOutlet UIView *popupwaitView;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -49,8 +50,6 @@
 
 @property (strong, nonatomic) NSMutableArray *arrgalleryimg;
 @property (strong, nonatomic) NSString *current;
-
-@property (strong, nonatomic) NSString *type;
 
 @property (strong, nonatomic) IBOutlet UILabel_UILabelDynamicHeight *name;
 @property (strong, nonatomic) IBOutlet UILabel_UILabelDynamicHeight *detail;

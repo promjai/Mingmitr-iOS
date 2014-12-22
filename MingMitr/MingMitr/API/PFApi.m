@@ -216,6 +216,46 @@
     
 }
 
+- (void)getFeedById:(NSString *)news_id {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@feed/%@",API_URL,news_id];
+    
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getFeedByIdResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getFeedByIdErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)getNewsCommentObjId:(NSString *)feed_id padding:(NSString *)padding {
+    
+    if ([padding isEqualToString:@"NO"]) {
+        self.urlStr = [[NSString alloc] initWithFormat:@"%@feed/%@/comment?limit=5",API_URL,feed_id];
+    } else {
+        self.urlStr = [[NSString alloc] initWithFormat:@"%@",padding];
+    }
+    
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getNewsCommentObjIdResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getNewsCommentObjIdErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)commentObjId:(NSString *)obj_id content:(NSString *)content {
+    
+    NSDictionary *parameters = @{@"message":content , @"access_token":[self getAccessToken]};
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@feed/%@/comment",API_URL,obj_id];
+    [self.manager POST:self.urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self commentObjIdResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self commentObjIdErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
 #pragma mark - Feed Notification
 - (void)getNotification:(NSString *)limit link:(NSString *)link {
     
@@ -362,6 +402,50 @@
     
 }
 
+#pragma mark - Member
+- (void)getStamp {
+    
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@user/stamp/%@",API_URL,[self getUserId]];
+    [self.manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getStampResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getStampErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)stampAddPoint:(NSString *)point password:(NSString *)password {
+    
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@user/stamp/add/%@",API_URL,[self getUserId]];
+    NSDictionary *parameters = @{@"point":point , @"password":password  };
+    [self.manager POST:urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self stampAddPointResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self stampAddPointErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)getStampStyle {
+    
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@stamp/style",API_URL];
+    [self.manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getStampStyleResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getStampStyleErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)history {
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/history/%@?limit=100",API_URL,[self getUserId]];
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getHistoryResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getHistoryErrorResponse:[error localizedDescription]];
+    }];
+}
+
 #pragma mark - Contact
 - (void)getContact {
     
@@ -372,6 +456,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self.delegate PFApi:self getContactErrorResponse:[error localizedDescription]];
     }];
+    
 }
 
 - (void)getContactBranches {

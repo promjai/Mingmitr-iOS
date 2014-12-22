@@ -35,11 +35,10 @@
 @property NSUserDefaults *foldertype1Offline;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (weak, nonatomic) IBOutlet UIView *popupwaitView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property (strong, nonatomic) NSString *type;
 
 @property (strong, nonatomic) NSString *titlename;
 @property (strong, nonatomic) NSString *folder_id;

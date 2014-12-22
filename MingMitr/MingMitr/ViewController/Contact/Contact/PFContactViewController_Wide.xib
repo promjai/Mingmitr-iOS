@@ -16,6 +16,7 @@
                 <outlet property="navBar" destination="TSa-b7-86F" id="6LH-hA-H8I"/>
                 <outlet property="navController" destination="ai0-Vy-zzV" id="ek4-TG-lc8"/>
                 <outlet property="navItem" destination="JgM-A4-ecA" id="hgI-S6-Cf8"/>
+                <outlet property="popupwaitView" destination="Iqm-wQ-IcH" id="CxJ-iC-QZC"/>
                 <outlet property="tableView" destination="nEO-3L-PlX" id="dWc-nG-328"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="waitView" destination="OYw-Ha-l7a" id="TYR-kQ-A7E"/>
@@ -27,12 +28,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sk4-dV-jXu">
-                    <rect key="frame" x="142" y="265" width="37" height="37"/>
-                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </activityIndicatorView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iqm-wQ-IcH">
+                    <rect key="frame" x="125" y="249" width="70" height="70"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-sU-c4S">
+                            <rect key="frame" x="17" y="16" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

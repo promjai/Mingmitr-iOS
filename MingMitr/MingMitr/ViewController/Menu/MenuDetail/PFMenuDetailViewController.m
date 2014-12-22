@@ -36,6 +36,10 @@
     
     [self.view addSubview:self.waitView];
     
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+    
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_share"] style:UIBarButtonItemStyleDone target:self action:@selector(share)];
     self.navigationItem.rightBarButtonItem = rightButton;
 
@@ -48,20 +52,6 @@
     
     NSString *id = [NSString stringWithFormat:@"%@",[self.obj objectForKey:@"id"]];
     [self.Api getMenuPictureById:id];
-    
-    if ([self.type isEqualToString:@"Franchise"]) {
-        self.price.hidden = YES;
-        self.price1.hidden = YES;
-        
-        self.baht.hidden = YES;
-        self.baht1.hidden = YES;
-    } else {
-        self.price.hidden = NO;
-        self.price1.hidden = NO;
-        
-        self.baht.hidden = NO;
-        self.baht1.hidden = NO;
-    }
     
     NSString *price = [[NSString alloc] initWithFormat:@"%@",[self.obj objectForKey:@"price"]];
     
