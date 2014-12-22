@@ -74,6 +74,15 @@
 		814BFEB71A47DA9400C7FA29 /* PFSeeprofileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814BFEB41A47DA9400C7FA29 /* PFSeeprofileViewController.m */; };
 		814BFEB81A47DA9400C7FA29 /* PFSeeprofileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEB51A47DA9400C7FA29 /* PFSeeprofileViewController.xib */; };
 		814BFEB91A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEB61A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib */; };
+		814BFEBB1A4806D000C7FA29 /* PFContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEBA1A4806D000C7FA29 /* PFContactViewController.xib */; };
+		814BFEBD1A48070800C7FA29 /* PFRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEBC1A48070800C7FA29 /* PFRewardViewController.xib */; };
+		814BFEBF1A48075200C7FA29 /* PFMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEBE1A48075200C7FA29 /* PFMenuViewController.xib */; };
+		814BFEC11A48077800C7FA29 /* PFDetailFoldertype1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEC01A48077800C7FA29 /* PFDetailFoldertype1ViewController.xib */; };
+		814BFEC31A48079A00C7FA29 /* PFDetailFoldertypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEC21A48079A00C7FA29 /* PFDetailFoldertypeViewController.xib */; };
+		814BFEC51A4807BA00C7FA29 /* PFMenuDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEC41A4807BA00C7FA29 /* PFMenuDetailViewController.xib */; };
+		814BFEC71A4807E800C7FA29 /* PFFranchiseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEC61A4807E800C7FA29 /* PFFranchiseDetailViewController.xib */; };
+		814BFEC91A48082400C7FA29 /* PFAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEC81A48082400C7FA29 /* PFAccountViewController.xib */; };
+		814BFECB1A48084F00C7FA29 /* PFUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFECA1A48084F00C7FA29 /* PFUpdateViewController.xib */; };
 		8161D9171A429E690062DB4B /* icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D9161A429E690062DB4B /* icon_share@2x.png */; };
 		8161D91A1A42B9A30062DB4B /* icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D9191A42B9A30062DB4B /* icon_share@3x.png */; };
 		8161D9B21A42BB640062DB4B /* bt_create_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D99F1A42BB640062DB4B /* bt_create_account@2x.png */; };
@@ -413,6 +422,15 @@
 		814BFEB41A47DA9400C7FA29 /* PFSeeprofileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFSeeprofileViewController.m; sourceTree = "<group>"; };
 		814BFEB51A47DA9400C7FA29 /* PFSeeprofileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFSeeprofileViewController.xib; sourceTree = "<group>"; };
 		814BFEB61A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFSeeprofileViewController_Wide.xib; sourceTree = "<group>"; };
+		814BFEBA1A4806D000C7FA29 /* PFContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFContactViewController.xib; sourceTree = "<group>"; };
+		814BFEBC1A48070800C7FA29 /* PFRewardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFRewardViewController.xib; sourceTree = "<group>"; };
+		814BFEBE1A48075200C7FA29 /* PFMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMenuViewController.xib; sourceTree = "<group>"; };
+		814BFEC01A48077800C7FA29 /* PFDetailFoldertype1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFDetailFoldertype1ViewController.xib; sourceTree = "<group>"; };
+		814BFEC21A48079A00C7FA29 /* PFDetailFoldertypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFDetailFoldertypeViewController.xib; sourceTree = "<group>"; };
+		814BFEC41A4807BA00C7FA29 /* PFMenuDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMenuDetailViewController.xib; sourceTree = "<group>"; };
+		814BFEC61A4807E800C7FA29 /* PFFranchiseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFFranchiseDetailViewController.xib; sourceTree = "<group>"; };
+		814BFEC81A48082400C7FA29 /* PFAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFAccountViewController.xib; sourceTree = "<group>"; };
+		814BFECA1A48084F00C7FA29 /* PFUpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateViewController.xib; sourceTree = "<group>"; };
 		8161D9161A429E690062DB4B /* icon_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@2x.png"; sourceTree = "<group>"; };
 		8161D9191A42B9A30062DB4B /* icon_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@3x.png"; sourceTree = "<group>"; };
 		8161D99F1A42BB640062DB4B /* bt_create_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_create_account@2x.png"; sourceTree = "<group>"; };
@@ -830,6 +848,7 @@
 				81271A2A1A451C50009DB471 /* PFFranchiseDetailViewController.h */,
 				81271A2B1A451C50009DB471 /* PFFranchiseDetailViewController.m */,
 				81271A291A451C50009DB471 /* PFFranchiseDetailViewController_Wide.xib */,
+				814BFEC61A4807E800C7FA29 /* PFFranchiseDetailViewController.xib */,
 			);
 			path = FranchiseDetail;
 			sourceTree = "<group>";
@@ -886,6 +905,7 @@
 				81271A511A451FE8009DB471 /* PFRewardViewController.h */,
 				81271A521A451FE8009DB471 /* PFRewardViewController.m */,
 				81271A541A451FE8009DB471 /* PFRewardViewController_Wide.xib */,
+				814BFEBC1A48070800C7FA29 /* PFRewardViewController.xib */,
 			);
 			path = Reward;
 			sourceTree = "<group>";
@@ -1000,6 +1020,7 @@
 				8161DA581A42C3370062DB4B /* PFAccountViewController.h */,
 				8161DA591A42C3370062DB4B /* PFAccountViewController.m */,
 				8161DA5B1A42C3370062DB4B /* PFAccountViewController_Wide.xib */,
+				814BFEC81A48082400C7FA29 /* PFAccountViewController.xib */,
 				8161DA5C1A42C3370062DB4B /* PFEditDetailViewController.h */,
 				8161DA5D1A42C3370062DB4B /* PFEditDetailViewController.m */,
 				8161DA5E1A42C3370062DB4B /* PFEditDetailViewController.xib */,
@@ -1103,6 +1124,7 @@
 				816276381A4147B4008F2043 /* PFUpdateViewController.h */,
 				816276391A4147B4008F2043 /* PFUpdateViewController.m */,
 				8162763A1A4147B4008F2043 /* PFUpdateViewController_Wide.xib */,
+				814BFECA1A48084F00C7FA29 /* PFUpdateViewController.xib */,
 			);
 			path = Update;
 			sourceTree = "<group>";
@@ -1129,6 +1151,7 @@
 				816276501A41870E008F2043 /* PFMenuViewController.h */,
 				816276511A41870E008F2043 /* PFMenuViewController.m */,
 				816276521A41870E008F2043 /* PFMenuViewController_Wide.xib */,
+				814BFEBE1A48075200C7FA29 /* PFMenuViewController.xib */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -1392,6 +1415,7 @@
 				81B4EB891A43EBAF00814FAB /* PFContactViewController.h */,
 				81B4EB8A1A43EBAF00814FAB /* PFContactViewController.m */,
 				81B4EB8B1A43EBAF00814FAB /* PFContactViewController_Wide.xib */,
+				814BFEBA1A4806D000C7FA29 /* PFContactViewController.xib */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -1810,9 +1834,11 @@
 				81DE35041A42875C00159412 /* PFDetailFoldertype1ViewController.h */,
 				81DE35051A42875C00159412 /* PFDetailFoldertype1ViewController.m */,
 				81DE35071A42875C00159412 /* PFDetailFoldertype1ViewController_Wide.xib */,
+				814BFEC01A48077800C7FA29 /* PFDetailFoldertype1ViewController.xib */,
 				81DE35081A42875C00159412 /* PFDetailFoldertypeViewController.h */,
 				81DE35091A42875C00159412 /* PFDetailFoldertypeViewController.m */,
 				81DE350B1A42875C00159412 /* PFDetailFoldertypeViewController_Wide.xib */,
+				814BFEC21A48079A00C7FA29 /* PFDetailFoldertypeViewController.xib */,
 			);
 			path = Foldertype;
 			sourceTree = "<group>";
@@ -1823,6 +1849,7 @@
 				81DE351B1A4290F700159412 /* PFMenuDetailViewController.h */,
 				81DE351C1A4290F700159412 /* PFMenuDetailViewController.m */,
 				81DE351E1A4290F800159412 /* PFMenuDetailViewController_Wide.xib */,
+				814BFEC41A4807BA00C7FA29 /* PFMenuDetailViewController.xib */,
 			);
 			path = MenuDetail;
 			sourceTree = "<group>";
@@ -1937,14 +1964,17 @@
 				81271A2C1A451C50009DB471 /* PFFranchiseDetailViewController_Wide.xib in Resources */,
 				81CB73191A40232E006422C6 /* en_menu_off@3x.png in Resources */,
 				8161DAA71A42C3370062DB4B /* NotBoxReadedIp4.png in Resources */,
+				814BFEC31A48079A00C7FA29 /* PFDetailFoldertypeViewController.xib in Resources */,
 				81CB730C1A40232E006422C6 /* en_update_on.png in Resources */,
 				8161D9B81A42BB640062DB4B /* bt_login@2x.png in Resources */,
 				81271A5A1A451FE8009DB471 /* button_minus.png in Resources */,
 				8161DAA81A42C3370062DB4B /* NotBoxReadedIp4@2x.png in Resources */,
 				81B4EBA51A43EBAF00814FAB /* PFBranchesCell.xib in Resources */,
+				814BFEC51A4807BA00C7FA29 /* PFMenuDetailViewController.xib in Resources */,
 				8161D9B71A42BB640062DB4B /* bt_fill_username@3x.png in Resources */,
 				8161DA9F1A42C3370062DB4B /* HeadCommentBoxIp5@2x.png in Resources */,
 				814BFEA91A47D2D900C7FA29 /* NotBoxNoReadIp4@2x.png in Resources */,
+				814BFEC11A48077800C7FA29 /* PFDetailFoldertype1ViewController.xib in Resources */,
 				81B4EBA31A43EBAF00814FAB /* PFBranchDetailViewController_Wide.xib in Resources */,
 				8161DAA21A42C3370062DB4B /* LineCommentBoxIp5@2x.png in Resources */,
 				81271A701A451FE8009DB471 /* stamp@2x.png in Resources */,
@@ -1960,6 +1990,7 @@
 				81271A5D1A451FE8009DB471 /* button_plus_select.png in Resources */,
 				81271A581A451FE8009DB471 /* button_add.png in Resources */,
 				8161D9BF1A42BB640062DB4B /* ic_close@3x.png in Resources */,
+				814BFEC91A48082400C7FA29 /* PFAccountViewController.xib in Resources */,
 				814BFEB11A47D2DA00C7FA29 /* PFUpdateDetailViewController_Wide.xib in Resources */,
 				81B4EB631A43E23900814FAB /* ic_fax@3x.png in Resources */,
 				8161DAAC1A42C3370062DB4B /* PFNotificationViewController.xib in Resources */,
@@ -1974,6 +2005,7 @@
 				81B4EBB61A43EBAF00814FAB /* pin_map@3x.png in Resources */,
 				81CB73081A40232E006422C6 /* en_member_on.png in Resources */,
 				8161DA891A42C3370062DB4B /* ic_mail@2x.png in Resources */,
+				814BFEBD1A48070800C7FA29 /* PFRewardViewController.xib in Resources */,
 				814BFE9C1A47D2D900C7FA29 /* HeadCommentBoxNeIp5@2x.png in Resources */,
 				8161D9BA1A42BB640062DB4B /* bt_login_fb@2x.png in Resources */,
 				814BFEAD1A47D2D900C7FA29 /* NotBoxReadedIp5@2x.png in Resources */,
@@ -2039,9 +2071,11 @@
 				8161D9CB1A42BE160062DB4B /* ic_setting@3x.png in Resources */,
 				81B4EBAA1A43EBAF00814FAB /* PFBranchesViewController_Wide.xib in Resources */,
 				8161DA861A42C3370062DB4B /* ic_gender@2x.png in Resources */,
+				814BFEC71A4807E800C7FA29 /* PFFranchiseDetailViewController.xib in Resources */,
 				81271A611A451FE8009DB471 /* Button_reward@2x.png in Resources */,
 				81B4EB5B1A43E23900814FAB /* chapter02@2x.png in Resources */,
 				814BFEA51A47D2D900C7FA29 /* icon_share@2x.png in Resources */,
+				814BFEBF1A48075200C7FA29 /* PFMenuViewController.xib in Resources */,
 				8161D9CA1A42BE160062DB4B /* ic_setting@2x.png in Resources */,
 				81DE35021A427C1100159412 /* PFFranchiseCell.xib in Resources */,
 				81B4EB621A43E23900814FAB /* ic_fax@2x.png in Resources */,
@@ -2086,11 +2120,13 @@
 				81B4EB5A1A43E23900814FAB /* chapter02.png in Resources */,
 				8161DA9C1A42C3370062DB4B /* PFNotificationCell.xib in Resources */,
 				814BFEA81A47D2D900C7FA29 /* NotBoxNoReadIp4.png in Resources */,
+				814BFECB1A48084F00C7FA29 /* PFUpdateViewController.xib in Resources */,
 				8161DA941A42C3370062DB4B /* PFAccountViewController_Wide.xib in Resources */,
 				8161DA881A42C3370062DB4B /* ic_lock@2x.png in Resources */,
 				8161DAD01A42C4640062DB4B /* default.jpg in Resources */,
 				81DE35001A427C1100159412 /* PFProductCell.xib in Resources */,
 				81271A5E1A451FE8009DB471 /* button_point.png in Resources */,
+				814BFEBB1A4806D000C7FA29 /* PFContactViewController.xib in Resources */,
 				81B4EB6D1A43E23900814FAB /* ic_web@3x.png in Resources */,
 				814BFEA61A47D2D900C7FA29 /* LineCommentBoxIp5@2x.png in Resources */,
 				81271A6B1A451FE8009DB471 /* Light.png in Resources */,
