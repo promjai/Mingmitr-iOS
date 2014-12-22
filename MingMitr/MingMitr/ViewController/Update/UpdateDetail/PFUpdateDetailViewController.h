@@ -15,7 +15,7 @@
 
 #import "PFUpdateDetailCell.h"
 #import "PFLoginViewController.h"
-//#import "PFSeeprofileViewController.h"
+#import "PFSeeprofileViewController.h"
 
 @protocol PFUpdateDetailViewControllerDelegate <NSObject>
 

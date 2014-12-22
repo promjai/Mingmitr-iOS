@@ -624,17 +624,16 @@ BOOL newMediaDetail;
 
     }
     
-//    PFSeeprofileViewController *seeAct = [[PFSeeprofileViewController alloc] init];
-//    
-//    if (IS_WIDESCREEN) {
-//        seeAct = [[PFSeeprofileViewController alloc] initWithNibName:@"PFSeeprofileViewController_Wide" bundle:nil];
-//    } else {
-//        seeAct = [[PFSeeprofileViewController alloc] initWithNibName:@"PFSeeprofileViewController" bundle:nil];
-//    }
-//    self.navigationItem.title = @" ";
-//    seeAct.delegate = self;
-//    seeAct.user_id = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"user"] objectForKey:@"id"];
-//    [self.navigationController pushViewController:seeAct animated:YES];
+    PFSeeprofileViewController *seeAct = [[PFSeeprofileViewController alloc] init];
+    if (IS_WIDESCREEN) {
+        seeAct = [[PFSeeprofileViewController alloc] initWithNibName:@"PFSeeprofileViewController_Wide" bundle:nil];
+    } else {
+        seeAct = [[PFSeeprofileViewController alloc] initWithNibName:@"PFSeeprofileViewController" bundle:nil];
+    }
+    self.navigationItem.title = @" ";
+    seeAct.delegate = self;
+    seeAct.user_id = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"user"] objectForKey:@"id"];
+    [self.navigationController pushViewController:seeAct animated:YES];
     
 }
 
@@ -661,6 +660,14 @@ BOOL newMediaDetail;
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
+}
+
+- (void)PFImageViewController:(id)sender viewPicture:(UIImage *)image{
+    [self.delegate PFImageViewController:self viewPicture:image];
+}
+
+- (void)PFSeeprofileViewControllerBack {
+    self.navigationItem.title = [self.obj objectForKey:@"name"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

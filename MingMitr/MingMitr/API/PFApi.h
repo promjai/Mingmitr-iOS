@@ -27,6 +27,9 @@
 - (void)PFApi:(id)sender meResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender meErrorResponse:(NSString *)errorResponse;
 
+- (void)PFApi:(id)sender getUserByIdResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getUserByIdErrorResponse:(NSString *)errorResponse;
+
 - (void)PFApi:(id)sender getUserSettingResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse;
 
@@ -133,6 +136,8 @@
 - (void)userPictureUpload:(NSString *)picture_base64;
 - (void)updateSetting:(NSString *)profilename email:(NSString *)email website:(NSString *)website tel:(NSString *)tel gender:(NSString *)gender birthday:(NSString *)birthday;
 - (void)changePassword:(NSString *)old_password new_password:(NSString *)new_password;
+
+- (void)profile:(NSString *)userId;
 
 - (void)settingNews:(NSString *)status;
 - (void)settingMessage:(NSString *)status;

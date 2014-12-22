@@ -165,6 +165,18 @@
     }];
 }
 
+- (void)profile:(NSString *)userId {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/%@",API_URL,userId];
+    self.manager = [AFHTTPRequestOperationManager manager];
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getUserByIdResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getUserByIdErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
 - (void)settingNews:(NSString *)status {
     
     self.urlStr = [[NSString alloc] initWithFormat:@"%@user/setting/%@",API_URL,[self getUserId]];

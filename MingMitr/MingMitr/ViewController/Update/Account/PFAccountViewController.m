@@ -198,10 +198,6 @@ NSString *removeBreckets;
     
 }
 
-- (void)PFAccountViewController:(id)sender viewPicture:(NSString *)link{
-    [self.delegate PFAccountViewController:self viewPicture:link];
-}
-
 - (IBAction)fullimage:(id)sender {
     [self.delegate PFImageViewController:self viewPicture:self.thumUser.image];
 }

@@ -71,6 +71,9 @@
 		814BFEAF1A47D2D900C7FA29 /* PFUpdateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814BFE971A47D2D900C7FA29 /* PFUpdateDetailViewController.m */; };
 		814BFEB01A47D2D900C7FA29 /* PFUpdateDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFE981A47D2D900C7FA29 /* PFUpdateDetailViewController.xib */; };
 		814BFEB11A47D2DA00C7FA29 /* PFUpdateDetailViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFE991A47D2D900C7FA29 /* PFUpdateDetailViewController_Wide.xib */; };
+		814BFEB71A47DA9400C7FA29 /* PFSeeprofileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814BFEB41A47DA9400C7FA29 /* PFSeeprofileViewController.m */; };
+		814BFEB81A47DA9400C7FA29 /* PFSeeprofileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEB51A47DA9400C7FA29 /* PFSeeprofileViewController.xib */; };
+		814BFEB91A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814BFEB61A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib */; };
 		8161D9171A429E690062DB4B /* icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D9161A429E690062DB4B /* icon_share@2x.png */; };
 		8161D91A1A42B9A30062DB4B /* icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D9191A42B9A30062DB4B /* icon_share@3x.png */; };
 		8161D9B21A42BB640062DB4B /* bt_create_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D99F1A42BB640062DB4B /* bt_create_account@2x.png */; };
@@ -406,6 +409,10 @@
 		814BFE971A47D2D900C7FA29 /* PFUpdateDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFUpdateDetailViewController.m; sourceTree = "<group>"; };
 		814BFE981A47D2D900C7FA29 /* PFUpdateDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateDetailViewController.xib; sourceTree = "<group>"; };
 		814BFE991A47D2D900C7FA29 /* PFUpdateDetailViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateDetailViewController_Wide.xib; sourceTree = "<group>"; };
+		814BFEB31A47DA9400C7FA29 /* PFSeeprofileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFSeeprofileViewController.h; sourceTree = "<group>"; };
+		814BFEB41A47DA9400C7FA29 /* PFSeeprofileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFSeeprofileViewController.m; sourceTree = "<group>"; };
+		814BFEB51A47DA9400C7FA29 /* PFSeeprofileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFSeeprofileViewController.xib; sourceTree = "<group>"; };
+		814BFEB61A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFSeeprofileViewController_Wide.xib; sourceTree = "<group>"; };
 		8161D9161A429E690062DB4B /* icon_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@2x.png"; sourceTree = "<group>"; };
 		8161D9191A42B9A30062DB4B /* icon_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@3x.png"; sourceTree = "<group>"; };
 		8161D99F1A42BB640062DB4B /* bt_create_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_create_account@2x.png"; sourceTree = "<group>"; };
@@ -938,6 +945,17 @@
 				814BFE951A47D2D900C7FA29 /* PostBottonIp5@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		814BFEB21A47DA9400C7FA29 /* SeeProfile */ = {
+			isa = PBXGroup;
+			children = (
+				814BFEB31A47DA9400C7FA29 /* PFSeeprofileViewController.h */,
+				814BFEB41A47DA9400C7FA29 /* PFSeeprofileViewController.m */,
+				814BFEB51A47DA9400C7FA29 /* PFSeeprofileViewController.xib */,
+				814BFEB61A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib */,
+			);
+			path = SeeProfile;
 			sourceTree = "<group>";
 		};
 		8161D99D1A42BB640062DB4B /* Login */ = {
@@ -1708,6 +1726,7 @@
 				814BFE7C1A47D2D900C7FA29 /* UpdateDetail */,
 				8161DA3D1A42C3370062DB4B /* Account */,
 				8161DA641A42C3370062DB4B /* Notification */,
+				814BFEB21A47DA9400C7FA29 /* SeeProfile */,
 			);
 			path = Update;
 			sourceTree = "<group>";
@@ -1914,6 +1933,7 @@
 				81CB73051A40232E006422C6 /* en_contact_off.png in Resources */,
 				8161D9BB1A42BB640062DB4B /* bt_login_fb@3x.png in Resources */,
 				816276311A41464F008F2043 /* en_menu_off@2x.png in Resources */,
+				814BFEB91A47DA9400C7FA29 /* PFSeeprofileViewController_Wide.xib in Resources */,
 				81271A2C1A451C50009DB471 /* PFFranchiseDetailViewController_Wide.xib in Resources */,
 				81CB73191A40232E006422C6 /* en_menu_off@3x.png in Resources */,
 				8161DAA71A42C3370062DB4B /* NotBoxReadedIp4.png in Resources */,
@@ -1997,6 +2017,7 @@
 				8161DA8C1A42C3370062DB4B /* next.png in Resources */,
 				8161D9B91A42BB640062DB4B /* bt_login@3x.png in Resources */,
 				81271A721A451FE8009DB471 /* PFMemberViewController.xib in Resources */,
+				814BFEB81A47DA9400C7FA29 /* PFSeeprofileViewController.xib in Resources */,
 				814BFE9A1A47D2D900C7FA29 /* BodyCommentBoxNeIp5@2x.png in Resources */,
 				81B4EB5D1A43E23900814FAB /* chapter03@2x.png in Resources */,
 				81B4EB691A43E23900814FAB /* ic_powered_dark@3x.png in Resources */,
@@ -2132,6 +2153,7 @@
 				816276571A41870E008F2043 /* PFFolderCell.m in Sources */,
 				81CB72B31A40118A006422C6 /* PFMapView.m in Sources */,
 				81CB72741A40118A006422C6 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				814BFEB71A47DA9400C7FA29 /* PFSeeprofileViewController.m in Sources */,
 				81CB72751A40118A006422C6 /* AFNetworkReachabilityManager.m in Sources */,
 				81776D791A47C9E20057C366 /* MWTapDetectingView.m in Sources */,
 				81CB72DE1A401A2C006422C6 /* PFApi.m in Sources */,
