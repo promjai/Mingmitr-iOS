@@ -49,8 +49,6 @@ NSTimer *timmer;
     
     [self.Api getFeed:@"15" link:@"NO"];
     
-    NSLog(@"%@",[self.Api getUserId]);
-    
     // Navbar setup
     [[self.navController navigationBar] setBarTintColor:[UIColor colorWithRed:229.0f/255.0f green:172.0f/255.0f blue:48.0f/255.0f alpha:1.0f]];
     
@@ -104,7 +102,7 @@ NSTimer *timmer;
 - (void)PFApi:(id)sender checkBadgeResponse:(NSDictionary *)response {
     //NSLog(@"%@",response);
     
-    NSLog(@"%@",[response objectForKey:@"length"]);
+    //NSLog(@"%@",[response objectForKey:@"length"]);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[response objectForKey:@"length"] forKey:@"badge"];
