@@ -149,7 +149,7 @@ BOOL newMediaDetail;
 }
 
 - (void)PFApi:(id)sender getNewsCommentObjIdResponse:(NSDictionary *)response {
-    //NSLog(@"%@",response);
+    NSLog(@"%@",response);
     
     self.internetstatus = @"connect";
     
