@@ -142,7 +142,7 @@ NSTimer *timmer;
         toggleKeyboardButton.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
         
         [toggleKeyboardButton setBackgroundColor:[UIColor clearColor]];
-        [toggleKeyboardButton.layer setBorderColor:[[UIColor redColor] CGColor]];
+        [toggleKeyboardButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
         [toggleKeyboardButton.layer setBorderWidth: 1.0];
         [toggleKeyboardButton.layer setCornerRadius:10.0f];
         [toggleKeyboardButton addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];

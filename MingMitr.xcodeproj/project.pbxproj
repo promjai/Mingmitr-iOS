@@ -322,8 +322,6 @@
 		81CB731A1A40232E006422C6 /* en_menu_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB72FE1A40232E006422C6 /* en_menu_on@3x.png */; };
 		81CB731B1A40232E006422C6 /* en_update_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB72FF1A40232E006422C6 /* en_update_off@3x.png */; };
 		81CB731C1A40232E006422C6 /* en_update_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB73001A40232E006422C6 /* en_update_on@3x.png */; };
-		81CB731D1A40232E006422C6 /* ic_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB73011A40232E006422C6 /* ic_loading@2x.png */; };
-		81CB731E1A40232E006422C6 /* ic_loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81CB73021A40232E006422C6 /* ic_loading@3x.png */; };
 		81DE34FF1A427C1100159412 /* PFProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE34FA1A427C1100159412 /* PFProductCell.m */; };
 		81DE35001A427C1100159412 /* PFProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81DE34FB1A427C1100159412 /* PFProductCell.xib */; };
 		81DE35011A427C1100159412 /* PFFranchiseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DE34FD1A427C1100159412 /* PFFranchiseCell.m */; };
@@ -774,8 +772,6 @@
 		81CB72FE1A40232E006422C6 /* en_menu_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "en_menu_on@3x.png"; sourceTree = "<group>"; };
 		81CB72FF1A40232E006422C6 /* en_update_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "en_update_off@3x.png"; sourceTree = "<group>"; };
 		81CB73001A40232E006422C6 /* en_update_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "en_update_on@3x.png"; sourceTree = "<group>"; };
-		81CB73011A40232E006422C6 /* ic_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_loading@2x.png"; sourceTree = "<group>"; };
-		81CB73021A40232E006422C6 /* ic_loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_loading@3x.png"; sourceTree = "<group>"; };
 		81DE34F91A427C1100159412 /* PFProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFProductCell.h; sourceTree = "<group>"; };
 		81DE34FA1A427C1100159412 /* PFProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFProductCell.m; sourceTree = "<group>"; };
 		81DE34FB1A427C1100159412 /* PFProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFProductCell.xib; sourceTree = "<group>"; };
@@ -1771,8 +1767,6 @@
 				81CB72E61A40232E006422C6 /* @1x */,
 				81CB72EF1A40232E006422C6 /* @2x */,
 				81CB72F81A40232E006422C6 /* @3x */,
-				81CB73011A40232E006422C6 /* ic_loading@2x.png */,
-				81CB73021A40232E006422C6 /* ic_loading@3x.png */,
 				8161D9C41A42BE160062DB4B /* ic_notification@2x.png */,
 				8161D9C51A42BE160062DB4B /* ic_notification@3x.png */,
 				8161D9C61A42BE160062DB4B /* ic_setting@2x.png */,
@@ -2066,7 +2060,6 @@
 				81271A5F1A451FE8009DB471 /* button_point@2x.png in Resources */,
 				81CB73131A40232E006422C6 /* en_update_off@2x.png in Resources */,
 				8161D9171A429E690062DB4B /* icon_share@2x.png in Resources */,
-				81CB731D1A40232E006422C6 /* ic_loading@2x.png in Resources */,
 				8161DA7E1A42C3370062DB4B /* PFAccountCell.xib in Resources */,
 				8161D9CB1A42BE160062DB4B /* ic_setting@3x.png in Resources */,
 				81B4EBAA1A43EBAF00814FAB /* PFBranchesViewController_Wide.xib in Resources */,
@@ -2090,7 +2083,6 @@
 				814BFEA11A47D2D900C7FA29 /* BodyCommentBoxIp5@2x.png in Resources */,
 				81CB730E1A40232E006422C6 /* en_contact_on@2x.png in Resources */,
 				81DE350E1A42875C00159412 /* PFDetailFoldertype1ViewController_Wide.xib in Resources */,
-				81CB731E1A40232E006422C6 /* ic_loading@3x.png in Resources */,
 				814BFEB01A47D2D900C7FA29 /* PFUpdateDetailViewController.xib in Resources */,
 				81B4EBA61A43EBAF00814FAB /* ic_pin@2x.png in Resources */,
 				81B4EBBD1A43EBAF00814FAB /* PFWebViewController.xib in Resources */,
