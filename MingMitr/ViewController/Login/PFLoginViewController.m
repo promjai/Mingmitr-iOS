@@ -45,9 +45,9 @@ NSString *password;
     
     //Facebook
     fbloginview = [[FBLoginView alloc]init];
+    fbloginview.delegate = self;
     fbloginview.readPermissions = @[@"public_profile",@"email",@"user_birthday"];
     fbloginview.frame = CGRectMake(0, 0, 0, 0);
-    fbloginview.delegate = self;
     [self.view addSubview:fbloginview];
     
     FBSession *session = [[FBSession alloc] initWithPermissions:[[NSArray alloc] initWithObjects:@"basic_info",@"email",@"user_birthday", nil]];
