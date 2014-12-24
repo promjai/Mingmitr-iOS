@@ -28,6 +28,9 @@ BOOL newMedia;
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
     
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.update = [[PFUpdateViewController alloc] init];
     self.menu = [[PFMenuViewController alloc] init];
@@ -88,9 +91,6 @@ BOOL newMedia;
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     
     if ([[def objectForKey:@"badge"] intValue] == 0 && [[self.Api getAccessToken] length] != 0) {
-        
-        self.Api = [[PFApi alloc] init];
-        self.Api.delegate = self;
         
         [self.Api clearBadge];
         
