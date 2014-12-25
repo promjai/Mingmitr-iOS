@@ -43,6 +43,9 @@
 - (void)PFApi:(id)sender getFeedByIdResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getFeedByIdErrorResponse:(NSString *)errorResponse;
 
+- (void)PFApi:(id)sender getMessageByIdResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender getMessageByIdErrorResponse:(NSString *)errorResponse;
+
 - (void)PFApi:(id)sender getNewsCommentObjIdResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getNewsCommentObjIdErrorResponse:(NSString *)errorResponse;
 
@@ -52,6 +55,9 @@
 #pragma mark - Overview Notification Protocal Delegate
 - (void)PFApi:(id)sender getNotificationResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender getNotificationErrorResponse:(NSString *)errorResponse;
+
+- (void)PFApi:(id)sender deleteNotificationResponse:(NSDictionary *)response;
+- (void)PFApi:(id)sender deleteNotificationErrorResponse:(NSString *)errorResponse;
 
 - (void)PFApi:(id)sender checkBadgeResponse:(NSDictionary *)response;
 - (void)PFApi:(id)sender checkBadgeErrorResponse:(NSString *)errorResponse;
@@ -146,7 +152,10 @@
 - (void)getFeed:(NSString *)limit link:(NSString *)link;
 - (void)getFeedById:(NSString *)news_id;
 
+- (void)getMessageById:(NSString *)message_id;
+
 - (void)getNewsCommentObjId:(NSString *)feed_id padding:(NSString *)padding;
+- (void)deleteNotification:(NSString *)notify_id;
 - (void)commentObjId:(NSString *)obj_id content:(NSString *)content;
 
 #pragma mark - Feed Notification

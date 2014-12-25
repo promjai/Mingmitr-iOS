@@ -1,6 +1,6 @@
 //
 //  PFNotificationViewController.m
-//  thaweeyont
+//  MingMitr
 //
 //  Created by Pariwat on 26/11/14.
 //  Copyright (c) 2014 Platwo fusion. All rights reserved.
@@ -46,7 +46,6 @@ BOOL refreshDataNoti;
     self.navigationItem.title = @"Notification";
     
     [self.Api getNotification:@"15" link:@"NO"];
-    [self.Api clearBadge];
     
     self.arrObj = [[NSMutableArray alloc] init];
     
@@ -54,6 +53,9 @@ BOOL refreshDataNoti;
     [self.refreshControl setTintColor:[UIColor whiteColor]];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
+    
+    // During startup (-viewDidLoad or in storyboard) do:
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
 
 }
 
@@ -77,12 +79,15 @@ BOOL refreshDataNoti;
 - (void)PFApi:(id)sender getNotificationResponse:(NSDictionary *)response {
     //NSLog(@"%@",response);
     
+    [self.Api clearBadge];
+    
     [self.waitView removeFromSuperview];
     [self.refreshControl endRefreshing];
     
     self.checkinternet = @"connect";
     
     if (!refreshDataNoti) {
+        [self.arrObj removeAllObjects];
         for (int i=0; i<[[response objectForKey:@"data"] count]; ++i) {
             [self.arrObj addObject:[[response objectForKey:@"data"] objectAtIndex:i]];
         }
@@ -115,6 +120,7 @@ BOOL refreshDataNoti;
     self.checkinternet = @"error";
     
     if (!refreshDataNoti) {
+        [self.arrObj removeAllObjects];
         for (int i=0; i<[[[self.notifyOffline objectForKey:@"notificationArray"] objectForKey:@"data"] count]; ++i) {
             [self.arrObj addObject:[[[self.notifyOffline objectForKey:@"notificationArray"] objectForKey:@"data"] objectAtIndex:i]];
         }
@@ -154,6 +160,30 @@ BOOL refreshDataNoti;
 }
 
 - (void)PFApi:(id)sender getFeedByIdErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
+}
+
+//message
+
+- (void)PFApi:(id)sender getMessageByIdResponse:(NSDictionary *)response {
+    //NSLog(@"%@",response);
+    
+    PFMessageViewController *coupondetail = [[PFMessageViewController alloc] init];
+    
+    if(IS_WIDESCREEN){
+        coupondetail = [[PFMessageViewController alloc] initWithNibName:@"PFMessageViewController_Wide" bundle:nil];
+    } else {
+        coupondetail = [[PFMessageViewController alloc] initWithNibName:@"PFMessageViewController" bundle:nil];
+    }
+    self.navigationItem.title = @" ";
+    NSString *message = [[NSString alloc] initWithFormat:@"%@   %@",[response objectForKey:@"message"],@""];
+    coupondetail.message = message;
+    coupondetail.delegate = self;
+    [self.navigationController pushViewController:coupondetail animated:YES];
+    
+}
+
+- (void)PFApi:(id)sender getMessageByIdErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
 }
 
@@ -201,6 +231,10 @@ BOOL refreshDataNoti;
         
         [self.Api getFeedById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
         
+    } else if ( [type isEqualToString:@"message"] ) {
+        
+        [self.Api getMessageById:[[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object"] objectForKey:@"id"]];
+        
     }
     
     NSString *urlStr = [[NSString alloc] initWithFormat:@"%@user/notify/read/%@",API_URL,[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"id"]];
@@ -216,6 +250,29 @@ BOOL refreshDataNoti;
         NSLog(@"%@",error);
     }];
     
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+        
+        [self.Api deleteNotification:[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"id"]];
+        
+    }
+}
+
+- (void)PFApi:(id)sender deleteNotificationResponse:(NSDictionary *)response {
+    [self.Api getNotification:@"15" link:@"NO"];
+}
+
+- (void)PFApi:(id)sender deleteNotificationErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
 }
 
 #pragma mark -
@@ -240,9 +297,13 @@ BOOL refreshDataNoti;
 }
 
 - (void)PFUpdateDetailViewControllerBack {
-    self.navigationItem.title = @"Notification";
-    [self.tableView reloadData];
+    [self viewDidLoad];
 }
+
+- (void)PFMessageViewControllerBack {
+    [self viewDidLoad];
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

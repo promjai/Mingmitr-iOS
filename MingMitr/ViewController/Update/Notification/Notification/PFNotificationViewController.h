@@ -1,6 +1,6 @@
 //
 //  PFNotificationViewController.h
-//  thaweeyont
+//  MingMitr
 //
 //  Created by Pariwat on 26/11/14.
 //  Copyright (c) 2014 Platwo fusion. All rights reserved.
@@ -13,6 +13,7 @@
 #import "PFApi.h"
 
 #import "PFUpdateDetailViewController.h"
+#import "PFMessageViewController.h"
 
 @protocol PFNotificationViewControllerDelegate <NSObject>
 

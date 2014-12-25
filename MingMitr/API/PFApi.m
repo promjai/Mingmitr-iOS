@@ -249,6 +249,18 @@
     
 }
 
+- (void)getMessageById:(NSString *)message_id {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@message/%@",API_URL,message_id];
+    
+    [self.manager GET:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self getMessageByIdResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self getMessageByIdErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
 - (void)getNewsCommentObjId:(NSString *)feed_id padding:(NSString *)padding {
     
     if ([padding isEqualToString:@"NO"]) {
@@ -261,6 +273,18 @@
         [self.delegate PFApi:self getNewsCommentObjIdResponse:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self.delegate PFApi:self getNewsCommentObjIdErrorResponse:[error localizedDescription]];
+    }];
+    
+}
+
+- (void)deleteNotification:(NSString *)notify_id {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/notify/%@",API_URL,notify_id];
+    
+    [self.manager DELETE:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self deleteNotificationResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self deleteNotificationErrorResponse:[error localizedDescription]];
     }];
     
 }
