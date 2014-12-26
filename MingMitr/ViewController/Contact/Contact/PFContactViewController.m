@@ -91,8 +91,7 @@ NSTimer *timmer;
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
 
-    [self.tableView reloadData];
-    [refreshControl endRefreshing];
+    [self.Api getContactBranches];
 
 }
 
