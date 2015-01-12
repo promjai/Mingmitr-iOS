@@ -92,7 +92,7 @@ NSTimer *timmer;
         
         [self.Api getStampStyle];
         
-        [self.addPointButton setTitle:@"Login" forState:UIControlStateNormal];
+        [self.addPointButton setTitle:@"Log In" forState:UIControlStateNormal];
         self.showpoint.text = @"0";
         
     } else {

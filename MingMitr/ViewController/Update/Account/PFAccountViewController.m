@@ -45,7 +45,7 @@ NSString *removeBreckets;
     self.notificationLabel.text = @"Notification setting";
     self.newupdateLabel.text = @"News Update";
     self.messageLabel.text = @"Message from shop";
-    [self.logoutButton setTitle:@"Logout" forState:UIControlStateNormal];
+    [self.logoutButton setTitle:@"Log Out" forState:UIControlStateNormal];
     
     self.tableView.tableHeaderView = self.headerView;
     self.tableView.tableFooterView = self.footerView;
